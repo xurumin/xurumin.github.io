@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+# Lista de comandos do Xurumin
 
-You can use the [editor on GitHub](https://github.com/xuruminbot/xurumin.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Oi! Está é a lista de comandos do bot Xurumin! Se precisar de ajuda, não hesite em chamar!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Musica
+| Comando | Descrição  | Aliases |
+|--|--|--|
+|play \<link para o vídeo>| Toca o link do vídeo | |
+|spotify \<link para a playlist> | Toca a playlist do Spotify | spt |
+|youtube \<link para a playlist> | Toca a playlist do Youtube| yt |
+|pause| Da uma parada no que estiver tocando | |
+|resume| Volta a tocar o que tinha sido parado | |
+|skip| Música chata tocando? Pule ela! | |
+|leave| Cansou de música? Tudo bem! Eu volto depois :) | |
+|shuffle| Mude a ordem da playlist | |
+|queue| Veja sua lista de músicas | |
 
-### Markdown
+## Memes
+| Comando | Descrição  | Aliases |
+|--|--|--|
+|filosofo ou filosofo \<texto a ser dito>| O que será que disse o filósofo? | filo, filosofos |
+|meme| Que tal receber um meme no seu canal? ||
+|cat| Receba a imagem de um gatinho fofinho :3 | gato |
+|fish| Que tal um peixin? | peixe |
+|xkcd| Receba um meme do XKCD ||
+|pedro| pedro ||
+|juan| juan ||
+|ratinho| Receba um vídeo do ratinho ||
+|rapaz| Receba um RÁPÁAAAZ do Xaropinho ||
+|gatinhodamamae @usuario| Mostre para todo mundo quem é o gatinho da mamae ||
+|fusca| Receba a imagem de um fusca | beetle |
+|monarktweet| O que o Monark tweetou dessa vez? | monarktw, mktwt, monarktwt |
+|indoatras| Vá atrás desse tal por que ele fez aquilo | indoatrasdessetalde, indoatrasdesse, iadtd |
+|manualdomundo| Você viu esse vídeo do Manuel do mundo? | mdm |
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xuruminbot/xurumin.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Gerais
+| Comando | Descrição  | Aliases |
+|--|--|--|
+|ping| Verifique o ping do bot | |
