@@ -9,3 +9,56 @@ body {
     min-height: 100vh;
     background-color: #F2F2F2;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+
+}
+
+.logo {
+    cursor: pointer;
+    width: 8rem;
+    margin-right: auto;
+}
+
+li,a, .add {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #514F8C;
+    
+
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 60px;
+    
+}
+.nav-links li a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    
+}
+.nav-links li a:hover {
+    color:#af8ec5;
+}
+.add {
+    padding: 5px 25px ;
+    background-color: #514F8C;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #F2F2F2;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;   
+}
+.add:hover {
+    background-color: #9377A6;
+}
