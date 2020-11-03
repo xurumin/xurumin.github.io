@@ -143,15 +143,49 @@ li, a, .add {
     font-size: 14pt;
     font-family: 'Poppins', sans-serif;
 }
+
 .ilust-container {
-flex: 1;
-
-
+    flex: 1;
 }
+
 .grlp {
     position: relative;
     bottom: 10px;
     left: 0px;
     width: 100%;
     z-index: -1;
+}
+
+.feat-box {
+    display: flex;
+    /*width: 85%; */
+    width: 95%; 
+    margin: 50px auto;
+    border-radius: 40px;
+    min-height: 70vh;
+    background-color: #514F8C;
+}
+
+.ft-intro h1 {
+    margin: 38px 0px 0px 80px;
+    font-size: 40pt;
+    color: #F2F2F2;
+    font-weight: 600;
+}
+
+.prefix {
+    margin: 5px 0px 0px 80px;
+    border-radius: 10px;
+    width: auto;
+    padding: 5px 20px 5px 10px ;
+    height: auto;
+    background-color: #F2F2F2;
+    align-items: center;
+}
+
+.ft-intro p {
+    margin: auto;
+    font-size: 14pt;
+    color: #514F8C;
+    font-weight: 600;
 }
