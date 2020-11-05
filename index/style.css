@@ -159,7 +159,7 @@ li, a, .add {
 .feat-box {
     display: flex;
     /*width: 85%; */
-    width: 95%; 
+    width: 95%;
     margin: 50px auto;
     border-radius: 40px;
     min-height: 70vh;
@@ -176,9 +176,8 @@ li, a, .add {
 .prefix {
     margin: 5px 0px 0px 80px;
     border-radius: 10px;
-   
-    max-width:  33%;
-    padding: 5px 20px 5px 10px ;
+    max-width: 33%;
+    padding: 5px 20px 5px 10px;
     height: auto;
     background-color: #F2F2F2;
     align-items: center;
@@ -190,23 +189,110 @@ li, a, .add {
     color: #514F8C;
     font-weight: 600;
 }
+
 .party {
     left: 7.4cm;
     bottom: 10px;
     position: relative;
     width: 40%;
-    
 }
+
 .desc-container {
-    width: 40%;
-    margin: auto;
+    width: 75%;
+    margin: 5px 0px 0px 20px;
+    padding: 50px 30px 0px 0px;
     flex: 1;
     display: flex;
+    max-height: 60vh;
 }
+
 .desc-container p {
     color: azure;
+    margin-left: 60px;
     font-weight: 500;
     flex-direction: column;
+}
+
+.party {
+    bottom: 300px;
+    width: 50%;
+}
+
+footer {
+    background-color: #9377A6;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
 }
 
+.up-section ul {
+    margin: 0px;
+    padding: 0px 20px;
+}
+.up-section  {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0px;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.f-logo {
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    padding: 5px 0px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.down-section p {
+    color: #F2F2F2;
+}
+
+.f-logo {
+    margin: 0px;
+    padding: 0px 0px;
+}
+.up-section ul li a {
+    color: #F2F2F2;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    
+    
+}
+.up-section  li  {
+    display: inline-block;
+    padding: 0px 10px;
+    list-style: none;
+}
+
+.up-section {
+   border-bottom: 1px solid #F2F2F2;
+  
+}
+.copyrigth {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #F2F2F2;
+}
+.down-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0px;
+    margin: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.discord {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
