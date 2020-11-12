@@ -142,6 +142,12 @@ li, a, .add {
     font-weight: 400;
     font-size: 14pt;
     font-family: 'Poppins', sans-serif;
+    transition: ease-out 0.3s;
+}
+.addme:hover {
+    box-shadow: inset 150px 0 0 0 #F4F4F4;
+    color: #514F8C;
+    border: 2px solid;
 }
 
 .ilust-container {

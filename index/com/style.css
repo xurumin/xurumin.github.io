@@ -100,12 +100,21 @@ li, a, .add {
     padding: 30px 0px;
     overflow: hidden;
 }
-
+.cat-container {
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+    
+}
+.cat {
+    position: absolute;
+    z-index: 1;
+}
 .commands {
     display: flex;
-    width: 85%;
-    margin: auto;
-    min-height: 12vh;
+    width: 90%;
+    margin: 120px auto;
+    min-height: auto;
     align-items: center;
 }
 
@@ -122,6 +131,7 @@ li, a, .add {
     font-size: 40px;
     font-weight: 600;
     color: #514F8C;
+    padding-top: 000px;
 
 }
 .gerais-text {
@@ -129,4 +139,104 @@ li, a, .add {
     font-weight: 600;
     color: #514F8C;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer */
+footer {
+    background-color: #9377A6;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.up-section ul {
+    margin: 0px;
+    padding: 0px 20px;
+}
+.up-section  {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0px;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.f-logo {
+    color: #F2F2F2;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    padding: 5px 0px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.down-section p {
+    color: #F2F2F2;
+}
+
+.f-logo {
+    margin: 0px;
+    padding: 0px 0px;
+}
+.up-section ul li a {
+    color: #F2F2F2;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    
+    
+}
+.up-section  li  {
+    display: inline-block;
+    padding: 0px 10px;
+    list-style: none;
+}
+
+.up-section {
+   border-bottom: 1px solid #F2F2F2;
+  
+}
+.copyrigth {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #F2F2F2;
+}
+.down-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0px;
+    margin: auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.discord {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 }
