@@ -8,6 +8,7 @@ body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     background-color: #F2F2F2;
+    
 }
 
 header {
@@ -77,24 +78,7 @@ li, a, .add {
     margin: 5px;
 }
 
-@media screen and (max-width:1024px) {
-    .nav-links {
-        width: 100%;
-    }
-}
 
-@media screen and (max-width:768px) {
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 100vh;
-        top: 0vh;
-        background-color: #514F8C;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 .presentation {
     display: flex;
@@ -162,11 +146,117 @@ li, a, .add {
     z-index: -1;
 }
 
+@media screen and (min-width:768px) {
+    .working {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    /* .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        background-color: #514F8C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links {
+        display: none;
+    } 
+    */
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        background-color: #F2F2F2;
+    }
+    header {
+        display: none;
+    }
+    main {
+        display: none;
+    }
+    .cta {
+        padding: 30px 0px;
+        overflow: hidden;
+        outline-style: none;
+    }
+    .addme {
+        border: none;
+        border-radius: 50px;
+        background-color: #514F8C;
+        color: #F4F4F4;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 15px;
+        outline-style: none;
+        font-weight: 400;
+        font-size: 14pt;
+        font-family: 'Poppins', sans-serif;
+    }
+    .wonit {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+    }
+    .catcom {
+        width: auto;
+        z-index: 1;
+        position: relative;
+        width: auto;
+        height: auto;
+        align-self: center;
+        margin-bottom: 30px;
+    }
+    .sorry-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+    .sorry-container {
+        text-align: center;
+        position: absolute;
+        top: 35%;
+        /* posiciona na metade da tela */
+        margin-top: -50px;
+        /* e retrocede metade da altura */
+    }
+    .sorry-container h1 {
+        font-weight: 700;
+        color: #4B4A4A;
+        text-transform: uppercase;
+    }
+    .sorry-container p {
+        color: #4B4A4A;
+        margin: 10px;
+    }
+    .man {
+        display: none;
+    }
+    .foot {
+        display: none;
+    }
+}
+
+
+
+
+
 .feat-box {
     display: flex;
     /*width: 85%; */
     width: 95%;
-    margin: 50px auto;
+    margin: 50px auto -150px;
     border-radius: 40px;
     min-height: 70vh;
     background-color: #514F8C;
@@ -224,21 +314,22 @@ li, a, .add {
     width: 50%;
 }
 
+/*Footer */
+
 footer {
     background-color: #9377A6;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .up-section ul {
     margin: 0px;
     padding: 0px 20px;
 }
-.up-section  {
+
+.up-section {
     display: flex;
     justify-content: space-between;
     padding: 1% 0px;
@@ -247,6 +338,7 @@ footer {
     width: 90%;
     flex-wrap: wrap;
 }
+
 .f-logo {
     color: #F2F2F2;
     font-family: 'Poppins', sans-serif;
@@ -256,7 +348,6 @@ footer {
     font-weight: 600;
 }
 
-
 .down-section p {
     color: #F2F2F2;
 }
@@ -265,31 +356,32 @@ footer {
     margin: 0px;
     padding: 0px 0px;
 }
+
 .up-section ul li a {
     color: #F2F2F2;
     font-size: 16px;
     text-decoration: none;
     list-style: none;
-    
-    
 }
-.up-section  li  {
+
+.up-section li {
     display: inline-block;
     padding: 0px 10px;
     list-style: none;
 }
 
 .up-section {
-   border-bottom: 1px solid #F2F2F2;
-  
+    border-bottom: 1px solid #F2F2F2;
 }
+
 .copyrigth {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #F2F2F2;
 }
-.down-section{
+
+.down-section {
     display: flex;
     justify-content: space-between;
     padding: 1% 0px;
@@ -297,8 +389,19 @@ footer {
     width: 90%;
     flex-wrap: wrap;
 }
+
 .discord {
     width: 32px;
     height: 32px;
     cursor: pointer;
+}
+
+
+.man {
+    
+    width: auto;
+    z-index: 1;
+    left: 75%;
+    bottom: -36px;
+    position: relative;;
 }
