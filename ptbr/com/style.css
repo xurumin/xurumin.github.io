@@ -14,6 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 93px;
     padding: 0px 5%;
 }
 
@@ -29,20 +30,30 @@ li, a, .add {
     font-size: 16px;
     text-decoration: none;
     color: #514F8C;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .nav-links {
     list-style: none;
+    
+}
+.nav-links li {
+    margin-top: 14px;
+    
 }
 
 .nav-links li {
     display: inline-block;
     padding: 0px 60px;
+    
 }
 
 .nav-links li a {
     text-decoration: none;
     transition: all 0.3s ease 0s;
+    
+    
 }
 
 .nav-links li a:hover {
@@ -59,6 +70,7 @@ li, a, .add {
     font-weight: 300;
     transition: all 0.3s ease 0s;
     outline-style: none;
+    
 }
 
 .add:hover {
