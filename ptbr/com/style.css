@@ -16,6 +16,7 @@ header {
     align-items: center;
     height: 93px;
     padding: 0px 5%;
+    margin: 0px 15px;
 }
 
 .logo {
@@ -88,7 +89,13 @@ li, a, .add {
     background-color: #514F8C;
     margin: 5px;
 }
-
+.commands {
+    display: flex;
+    width: 90%;
+    margin: 120px auto auto;
+    min-height: auto;
+    align-items: center;
+}
 
 /* MOBILE */
 
@@ -135,7 +142,11 @@ header {
     height: 93px;
     padding: 0px 0%;
 }
-
+.commands {
+    display: flex;
+    width: 100%;
+    
+}
     .nav-links{
         display: none;
     }
@@ -215,10 +226,6 @@ header {
     .sorry-container p {
         color: #4B4A4A;
         margin: 10px;
-    }
-    .commands {
-        display: flex;
-        width: 90%;
     }
     footer {
         background-color: #9377A6;
@@ -314,13 +321,7 @@ header {
     z-index: 1;
 }
 
-.commands {
-    display: flex;
-    width: 90%;
-    margin: 120px auto auto;
-    min-height: auto;
-    align-items: center;
-}
+
 
 .table-container {
     flex: 1;
