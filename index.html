@@ -10,16 +10,14 @@
     <script>
         var userLang = navigator.language || navigator.userLanguage; 
         var currentURL = window.location.href
-        var url = "https://github.com/xurumin/aboutme/blob/main/help/COMMANDS.ptbr.md"
-        window.location.href = url;
-//         switch (userLang) {
-//             case "pt-BR":
-//                 window.location.href = `${currentURL}/ptbr`; //redirect to ptbr site
-//                 break;
-//             default:
-//                 window.location.href = `${currentURL}/ptbr`; //TODO: create a EN site
-//                 break;
-//         }
+        switch (userLang) {
+            case "pt-BR":
+                window.location.href = `${currentURL}/ptbr`; //redirect to ptbr site
+                break;
+            default:
+                window.location.href = `${currentURL}/ptbr`; //TODO: create a EN site
+                break;
+        }
     </script>
 </body>
 </html>
