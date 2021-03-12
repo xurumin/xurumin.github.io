@@ -10,6 +10,9 @@
     <script>
         var userLang = navigator.language || navigator.userLanguage; 
         var currentURL = window.location.href
+        var url = "https://github.com/xurumin/aboutme/blob/main/help/COMMANDS.ptbr.md"
+        window.location.href = url;
+        return;
         switch (userLang) {
             case "pt-BR":
                 window.location.href = `${currentURL}/ptbr`; //redirect to ptbr site
