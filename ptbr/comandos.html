@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
      user-scalable=0'>
-    <title>Xurumin - O bot mais fofo e divertido do Discord</title>
+    <title>Comandos - Xurumin</title>
     <link rel="shortcut icon" href="https://i.imgur.com/poZJ8Vo.png" type="image/x-icon">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
@@ -50,14 +50,15 @@
             src="https://www.facebook.com/tr?id=3666488206721527&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
     <script src="https://kit.fontawesome.com/6fc5325808.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid" id="top_bar">
+    <div class="container-fluid" id="top_bar_2">
         <div class="row justify-content-center" id="nv_bar">
             <div class="col-10">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img id="l_st" style="width: 140px;" src="./images/logo.png">
                         <img id="l_white" style="width: 140px;" src="./images/logo_white.png">
                     </a>
@@ -79,99 +80,46 @@
                 </nav>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center" id="cct">
-            <div class="col-12 col-md-10" id="main">
-                <div class="row">
-                    <div class="col-12 col-md-5" id="left-side">
-                        <div id="inner">
-                            <h1 id="title" class="animate__animated animate__fadeInUp">
-                                Oiê! Eu sou o<br>
-                                <span style="font-style: italic;"></span>Xurumin</span>!
-                            </h1>
-                            <p id="subtitle_mobile" class="animate__animated animate__fadeInUp">
-                                Um bot brasileiro feito para deixar seu servidor ainda mais incrível e divertido!
-                            </p>
-                            <p id="subtitle" class="animate__animated animate__fadeInUp">
-                                Um bot brasileiro que toca música (com playlists!) enquanto você joga com seus amigos e
-                                te deixa ouvir aquele podcast no fim de tarde.<br>Além disso, que tal uns memes daora?
-                                :3
-                            </p>
-                            <a href="https://discord.com/oauth2/authorize?client_id=753723888671785042&permissions=2080374975&scope=bot"
-                                target="_blank" class="cta animate__animated animate__fadeInUp btn" id="cta_top"><i
-                                    class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!</a>
-                            <a href="/comandos.html" class="cta animate__animated animate__fadeInUp btn"
-                                id="cta_top_sec"><i class="fas fa-terminal" style="margin-right: 5px;"></i>Ver
-                                comandos</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-7" id="right-side">
-                        <img id="sp_img" class="inner" src="./images//xurumin_cat.svg" alt="" srcset="">
-                    </div>
-                    <div class="col-md-12" id="top_arrow_down">
-                        <i class="fas fa-arrow-down animate__animated animate__fadeInUp"
-                            style="font-size: 35px; text-align: center; margin-top: 80px; color: #514F8C;"></i>
-                    </div>
-                </div>
-            </div>
-
-        </div>
     </div>
-    <!-- <div class="container-fluid" id="img_dw">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12" id="sc_img">
-            </div>
-        </div>
-    </div> -->
+    <script>
+        function httpGetAsync(theUrl)
+        {
+        return new Promise((resolve, reject)=>{
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    resolve(xmlHttp.responseText)
+            }
+            xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+            xmlHttp.send(null);
+        })
+        }
+        var md = window.markdownit();
 
-    <div class="row justify-content-center align-items-center" id="boxes">
-        <div class="col-12 col-md-8 items">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-12 col-md-8 text">
-                    <h1 class="animate__animated animate__fadeInUp">Solta o som DJ!</h1>
-                    <p class="animate__animated animate__fadeInUp">Deixe que a galera ouça aquele sonzinho maneiro
-                        enquanto joga com os amigos! Vale para playlists do Spotify e do Youtube também 😽!</p>
-                </div>
-                <div class="col-12 col-md-4 imsr cardd animate__animated animate__fadeInUp">
-                    <img class="image" style="transform: scaleX(-1);" src="./images/party.png">
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 items" id="">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8 text">
-                    <h1 class="animate__animated animate__fadeInUp">Lambda, lambda,<br>lambda, nerds!</h1>
-                    <p class="animate__animated animate__fadeInUp">Por que não deixar o povão ouvir um podcast juntinho
-                        no fim da tarde? (ou nas altas madrugas )</p>
-                </div>
-                <div class="col-12 col-md-4 imsr cardd animate__animated animate__fadeInUp">
-                    <img class="image" src="./images/podcast.png">
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 items" id="">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-12 col-md-8 text">
-                    <h1 class="animate__animated animate__fadeInUp">Deixa os garoto brincar!</h1>
-                    <p class="animate__animated animate__fadeInUp">Deixe a garotada se divertir com comandos interativos
-                        e cheios de imagens!<br><i>(modéstia a parte, mas sou conhecido como o melhor editor de memes da
-                            minha rua)</i></p>
-                </div>
-                <div class="col-12 col-md-4 imsr cardd animate__animated animate__fadeInUp">
-                    <img class="image" src="./images/catcom.png">
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8 items" id="">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8 text">
-                    <h1 class="animate__animated animate__fadeInUp">Noite dos joguinhos?</h1>
-                    <p class="animate__animated animate__fadeInUp">Jogue e <i
-                            style="text-decoration: line-through;">mostre quem é o melhor</i> se divirta seus amigos com
-                        jogos supimpas e legais!</p>
-                </div>
-                <div class="col-12 col-md-4 imsr cardd animate__animated animate__fadeInUp">
-                    <img class="image" src="./images/havingfun.png">
-                </div>
+        async function run(){
+        var response = await httpGetAsync("https://raw.githubusercontent.com/xurumin/aboutme/main/help/COMMANDS.ptbr.md")
+        var html =  md.render(response);
+        var m = html.split("<hr>")
+        document.getElementById("mycnt").innerHTML = m.slice(1,m.length).join("<br>")
+        }
+
+        run()
+    </script>
+
+    
+    <div class="container-fluid" id="content">
+        <div class="row justify-content-md-center">
+            <div class="col-11 col-md-10">
+                <h1 id="title">Lista de comandos</h1>
+                <p id="description">
+                    Olá! Bem-vendo a minha lista de comandos!<br>
+                    Aqui você vai encontrar *TODOS* os meus comendos.<br>
+                    Se quiser saber os comandos mais recentes, digite <b>x!novidades</b> no seu servidor!
+                    <br>
+                    <br>
+                    <blockquote id="bq">⚠️ Atencão: Por padrão, o prefixo dos comandos é x!</blockquote>
+                </p>
+                <div id="mycnt"></div>
             </div>
         </div>
     </div>
@@ -187,7 +135,7 @@
                 <a href="https://discord.com/oauth2/authorize?client_id=753723888671785042&permissions=2080374975&scope=bot"
                     target="_blank" class="cta animate__animated animate__fadeInUp btn" id="cta_top"><i
                         class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!</a>
-                <a href="/comandos.html" class="cta animate__animated animate__fadeInUp btn"
+                <a href="/comandos" target="_blank" class="cta animate__animated animate__fadeInUp btn"
                     id="cta_top_sec"><i class="fas fa-terminal" style="margin-right: 5px;"></i>Ver comandos</a>
             </div>
             <div class="col-12 col-md-6" id="cat">
