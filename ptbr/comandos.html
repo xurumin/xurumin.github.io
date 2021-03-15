@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
@@ -8,7 +9,8 @@
     <meta name="title" content="Comandos - Xurumin">
     <meta name="description" content="Um bot brasileiro que toca música (com playlists!) enquanto você joga com seus amigos e
     te deixa ouvir aquele podcast no fim de tarde. Além disso, também tenho memes e jogos!">
-    <meta name="keywords" content="discord, bot, xurumin, diversão, entretenimento, jogos, musica, podcast, playlist, spotify, youtube, games">
+    <meta name="keywords"
+        content="discord, bot, xurumin, diversão, entretenimento, jogos, musica, podcast, playlist, spotify, youtube, games">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Portuguese">
@@ -99,31 +101,34 @@
         </div>
     </div>
     <script>
-        function httpGetAsync(theUrl)
-        {
-        return new Promise((resolve, reject)=>{
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                    resolve(xmlHttp.responseText)
-            }
-            xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-            xmlHttp.send(null);
-        })
+        function httpGetAsync(theUrl) {
+            return new Promise((resolve, reject) => {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.onreadystatechange = function () {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                        resolve(xmlHttp.responseText)
+                }
+                xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+                xmlHttp.send(null);
+            })
         }
         var md = window.markdownit();
 
-        async function run(){
-        var response = await httpGetAsync("https://raw.githubusercontent.com/xurumin/aboutme/main/help/COMMANDS.ptbr.md")
-        var html =  md.render(response);
-        var m = html.split("<hr>")
-        document.getElementById("mycnt").innerHTML = m.slice(1,m.length).join("<br>")
+        async function run() {
+            document.getElementById("mycnt").innerHTML = "<b><img src='https://i.imgur.com/iyG3fCQ.gif' width='30px'> Carregando comandos...<b>"
+            var response = await httpGetAsync(
+                "https://raw.githubusercontent.com/xurumin/aboutme/main/help/COMMANDS.ptbr.md")
+            var html = md.render(response);
+            var m = html.split("<hr>")
+            document.getElementById("mycnt").innerHTML = m.slice(1, m.length).join("<br>")
         }
 
-        run()
+        window.onload = ()=>{
+            run()
+        }
     </script>
 
-    
+
     <div class="container-fluid" id="content">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10" id="aas">
@@ -152,8 +157,8 @@
                 <a href="https://discord.com/oauth2/authorize?client_id=753723888671785042&permissions=2080374975&scope=bot"
                     target="_blank" class="cta animate__animated animate__fadeInUp btn" id="cta_top"><i
                         class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!</a>
-                <a href="/ptbr/comandos.html" class="cta animate__animated animate__fadeInUp btn"
-                    id="cta_top_sec"><i class="fas fa-terminal" style="margin-right: 5px;"></i>Ver comandos</a>
+                <a href="/ptbr/comandos.html" class="cta animate__animated animate__fadeInUp btn" id="cta_top_sec"><i
+                        class="fas fa-terminal" style="margin-right: 5px;"></i>Ver comandos</a>
             </div>
             <div class="col-12 col-md-6" id="cat">
                 <img src="./images/Playful cat-cuate (1).svg" alt="Gato brincando">
@@ -170,7 +175,8 @@
                         <li><a target="_blank" href="https://discord.com/invite/bvb8YKSCQR">Precisa de ajuda?</a></li>
                         <li><a href="/ptbr/comandos.html">Lista de comandos</a></li>
                         <li><a target="_blank" href="https://github.com/xurumin/">Github do Xurumin</a></li>
-                        <li><a target="_blank" href="https://top.gg/bot/753723888671785042/vote">Quer ajudar o Xurumin? Vote agora!</a></li>
+                        <li><a target="_blank" href="https://top.gg/bot/753723888671785042/vote">Quer ajudar o Xurumin?
+                                Vote agora!</a></li>
                         <li><a href="/ptbr/termos.html">Termos de Uso</a></li>
                     </ul>
                 </div>
@@ -186,4 +192,5 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js'></script>
 </body>
+
 </html>
