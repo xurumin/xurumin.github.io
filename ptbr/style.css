@@ -493,7 +493,7 @@ a:hover {
 }
 
 /* MOBILE VERSION */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     #nv_bar {
         background-color: #43426d;
         padding: 3px;
@@ -665,6 +665,11 @@ a:hover {
     }
     #content #title, #content #description, #content #bq{
         padding-left: 10px;
+    }
+    #content #description{
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
