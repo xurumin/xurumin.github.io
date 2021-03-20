@@ -101,6 +101,50 @@
         </div>
     </div>
     <script>
+
+        var command_list = {
+            music: {
+                title: "Música",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/music.md"
+            },
+            podcast: {
+                title: "Podcast",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/podcast.md"
+            },
+            memes: {
+                title: "Memes",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/memes.md"
+            },
+            image: {
+                title: "Imagens",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/image.md"
+            },
+            videos: {
+                title: "Vídeos",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/videos.md"
+            },
+            gifs: {
+                title: "Gifs",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/gifs.md"
+            },
+            games: {
+                title: "Jogos",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/games.md"
+            },
+            notifications: {
+                title: "Notificações",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/notifications.md"
+            },
+            social: {
+                title: "Social",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/social.md"
+            },
+            general: {
+                title: "Gerais",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/general.md"
+            }
+        }
+
         function httpGetAsync(theUrl) {
             return new Promise((resolve, reject) => {
                 var xmlHttp = new XMLHttpRequest();
@@ -113,38 +157,108 @@
             })
         }
         var md = window.markdownit();
+        var lastSelected = ""
 
-        async function run() {
-            document.getElementById("mycnt").innerHTML = "<b><img src='https://i.imgur.com/iyG3fCQ.gif' width='30px'> Carregando comandos...<b>"
-            var response = await httpGetAsync(
-                "https://raw.githubusercontent.com/xurumin/aboutme/main/help/COMMANDS.ptbr.md")
+        async function showCategory(tag){
+            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+       
+            const command = command_list[tag]
+
+            document.getElementById("btn_cat").innerHTML = `${command.title} <i class="fas fa-chevron-down"></i>`
+
+            var response = await httpGetAsync(command.url)
             var html = md.render(response);
+
             var m = html.split("<hr>")
-            document.getElementById("mycnt").innerHTML = m.slice(1, m.length).join("<br>")
+            document.getElementById("mycnt").innerHTML = html
         }
 
-        window.onload = ()=>{
-            run()
+        async function changeCategory(tag){
+            if(document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) return;
+
+            document.getElementById(`cmd_${lastSelected}`).removeAttribute("selected")
+            document.getElementById(`cmd_${tag}`).setAttribute("selected", "")
+            lastSelected = tag
+            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+            showCategory(tag)
+        }
+
+        async function changeCategory_m(tag){
+            if(document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null) return;
+
+            //document.getElementById("category_modal").style.display = "hidden"
+            $('#category_modal').modal('hide')
+
+            document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
+            document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
+            lastSelected = tag
+            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+            showCategory(tag)
+        }
+
+        window.onload = async ()=>{
+            //run()
+            await showCategory("music")
+            var i = 0
+            for(var index in command_list){
+                const category = command_list[index]
+                if(i==0){
+                    lastSelected = index
+                    //computer
+                    document.getElementById("cmd_cat").innerHTML += (`<li id="cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`)
+
+                    //mobile
+                    document.getElementById("modal_cnt").innerHTML += (`<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')" selected>${category.title}</li>`)
+                }else{
+                    //computer
+                    document.getElementById("cmd_cat").innerHTML += (`<li id="cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`)
+
+                    //mobile
+                    document.getElementById("modal_cnt").innerHTML += (`<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')">${category.title}</li>`)
+                }
+                i += 1;
+            }
         }
     </script>
 
 
     <div class="container-fluid" id="content">
         <div class="row justify-content-md-center">
-            <div class="col-12 col-md-10" id="aas">
-                <h1 id="title">Lista de comandos</h1>
-                <p id="description">
-                    Olá! Bem-vindo à minha <b>lista de comandos</b>!<br>
-                    Aqui você vai encontrar *TODOS* os meus comandos.<br>
-                    Se quiser saber os comandos mais recentes, digite <b>x!novidades</b> no seu servidor!
-                    <br>
-                    <br>
-                    <blockquote id="bq">⚠️ Atencão: Por padrão, o prefixo dos comandos é x!</blockquote>
-                </p>
-                <div id="mycnt"></div>
+            <div class="col-12 col-md-2" id="left">
+                <h3>Categorias</h3>
+                
+                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
+                    Categorias <i class="fas fa-arrow-down"></i>
+                </button>
+                
+                <ul id="cmd_cat">
+                </ul>
+            </div>
+            <div class="col-12 col-md-9" id="right">
+                <div id="mycnt">
+
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="category_modal_title">Categorias</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <ul id="modal_cnt">
+
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="container-fluid" id="add_cta">
         <div class="row align-items-center">

@@ -419,8 +419,9 @@ a:hover {
     margin-top: -60px;
 }
 
-#mycnt{
-    margin-top: 40px;
+#mycnt {
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 #mycnt td {
@@ -434,8 +435,8 @@ a:hover {
     font-size: 30px;
     font-weight: 700;
     color: #2a2a44;
-    padding-top: 50px;
 }
+
 #mycnt h3 {
     font-size: 25px;
     padding-top: 20px;
@@ -444,14 +445,16 @@ a:hover {
     font-weight: 600;
     color: #2a2a44;
 }
-#mycnt table{
+
+#mycnt table {
     margin-top: 15px;
 }
+
 #mycnt tr:nth-child(even) {
     background: #FFF
 }
 
-#mycnt td{
+#mycnt td {
     font-size: 17px;
 }
 
@@ -471,26 +474,83 @@ a:hover {
     table-layout: fixed;
     width: 100%;
 }
-#content{
-    margin-top: 40px;
-    margin-bottom: 40px;
+
+#content {
+    /* margin-top: 40px;
+    margin-bottom: 40px; */
 }
-#content #title{
+
+#content #title {
     font-weight: 700;
     font-size: 50px;
     color: #514F8C;
 }
-#content #description{
+
+#content #description {
     font-weight: 500;
     font-size: 17px;
     color: #43426d;
 }
 
-#content #bq{
+#content #bq {
     font-weight: 700;
     font-size: 20px;
     color: #43426d;
 }
+
+#content #left {
+    /* background-color: #dfdfdf; */
+}
+
+#content #left ul li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    border-radius: 20px;
+    padding-left: 15px;
+
+    transition: background 0.2s;
+}
+
+#content #left ul li:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#content #left ul li[selected] {
+    color: whitesmoke;
+    font-weight: 600;
+    background-color: #726fd3;
+}
+
+#content #left ul {
+
+    /* background: #514F8C; */
+    padding: 0;
+}
+
+#content #left {
+    padding: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+#content #right {
+    padding-top: 20px;
+}
+
+#content #left #btn_cat {
+    display: none;
+}
+
 
 /* MOBILE VERSION */
 @media only screen and (max-width: 767px) {
@@ -654,19 +714,23 @@ a:hover {
         height: fit-content;
     }
 
-    #content #aas{
+    #content #right {
         margin: 0;
         padding: 0;
     }
 
-    
-    #mycnt td{
+
+    #mycnt td {
         font-size: 13px;
     }
-    #content #title, #content #description, #content #bq{
+
+    #content #title,
+    #content #description,
+    #content #bq {
         padding-left: 10px;
     }
-    #content #description{
+
+    #content #description {
         color: black;
         padding-left: 10px;
         padding-right: 10px;
@@ -677,21 +741,24 @@ a:hover {
         padding: 15px;
         padding-bottom: 0px;
     }
-    #footer #right{
+
+    #footer #right {
         text-align: center;
     }
-    #footer #right h1{
+
+    #footer #right h1 {
         font-size: 30px;
     }
-    #footer #right ul li a{
+
+    #footer #right ul li a {
         font-size: 15px;
     }
 
-    #footer #right ul li{
+    #footer #right ul li {
         padding: 5px;
     }
 
-    #footer #right{
+    #footer #right {
         padding-bottom: 20px;
     }
 
@@ -703,4 +770,81 @@ a:hover {
         text-align: center;
         background-color: #2a2a44;
     }
+
+    #content #left h3 {
+        float: left;
+    }
+
+    #content #left {
+        text-align: center;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+    }
+
+    #content #left #btn_cat {
+        text-align: left;
+        display: inline;
+        width: 95%;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+
+        border: 0px;
+
+        font-weight: 600;
+    }
+
+    #content #left #btn_cat i {
+        float: right;
+        font-size: 25px;
+        display: inline;
+    }
+
+    #content #left #btn_cat:active {
+        outline: none;
+    }
+
+    #content #left #cmd_cat {
+        display: none;
+    }
+
+    
+
+    #category_modal #modal_cnt li {
+        list-style: none;
+        font-size: 16px;
+        font-weight: 500;
+    
+        padding-top: 8px;
+        padding-bottom: 8px;
+    
+        margin-top: 6px;
+        margin-bottom: 6px;
+    
+        border-radius: 20px;
+        padding-left: 15px;
+    
+        transition: background 0.2s;
+    }
+    
+    #category_modal #modal_cnt li:hover {
+        background-color: #ebebeb;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
+    #category_modal #modal_cnt li[selected] {
+        color: whitesmoke;
+        font-weight: 600;
+        background-color: #726fd3;
+    }
+
+    #category_modal #modal_cnt {
+
+        /* background: #514F8C; */
+        padding: 0;
+    }
+
 }
