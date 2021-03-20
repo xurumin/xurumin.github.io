@@ -724,6 +724,13 @@ a:hover {
         font-size: 13px;
     }
 
+    #mycnt h2 {
+        padding-left: 10px;
+    }
+    #mycnt blockquote{
+        padding-left: 10px;
+    }
+
     #content #title,
     #content #description,
     #content #bq {
