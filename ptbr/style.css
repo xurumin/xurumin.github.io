@@ -542,6 +542,9 @@ a:hover {
     padding-top: 20px;
     padding-right: 20px;
 }
+#content #left h3{
+    margin-bottom: 15px;
+}
 
 #content #right {
     padding-top: 20px;
@@ -815,6 +818,9 @@ a:hover {
 
     #content #left #cmd_cat {
         display: none;
+    }
+    #content #left h3{
+        margin-bottom: 5px;
     }
 
     
