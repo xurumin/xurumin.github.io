@@ -68,7 +68,7 @@ a:hover {
 
 #top_bar {
     margin: 0;
-    height: 100%;
+    min-height: 100vh;
     text-align: center;
     max-width: 100%;
     background-color: #F2F2F2;
@@ -76,10 +76,14 @@ a:hover {
     background-image: linear-gradient(to bottom right, #20bbe2, #af1695); */
 }
 
+#menu_nav{
+    display: none;
+}
+
 
 #top_bar #cct {
-    height: 100%;
-    margin-top: -60px;
+    /* height: 90%; */
+    /* margin-top: -60px; */
 }
 
 #left-side {
@@ -415,10 +419,6 @@ a:hover {
 }
 
 
-#top_bar_2 #cct {
-    margin-top: -60px;
-}
-
 #mycnt {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -553,6 +553,17 @@ a:hover {
 #content #left #btn_cat {
     display: none;
 }
+#top_arrow_down{
+    margin: 0px;
+    margin-top: 80px;
+    padding: 0px;
+    color: #514F8C;
+}
+#top_arrow_down i{
+    margin: 0px;
+    padding: 0px;
+    font-size: 35px;
+}
 
 
 /* MOBILE VERSION */
@@ -587,7 +598,8 @@ a:hover {
 
 
     .navbar-brand {
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        float: left;
     }
 
     #top_nav_ic {}
@@ -858,6 +870,48 @@ a:hover {
 
         /* background: #514F8C; */
         padding: 0;
+    }
+    #menu_nav{
+        display: none;
+    }
+    
+    .modal-header{
+        border: none;
+    }
+    #menu_modal .modal-body{
+        margin: 0;
+        padding: 0;
+    }
+    #menu_modal .modal-body .nav-item{
+        margin: 0 auto;
+    
+    }
+    #menu_modal .modal-body ul{
+    }
+    
+    #menu_modal .modal-body ul li .nav-link{
+        color: #2a2a44;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    #menu_modal .modal-body ul li{
+        padding-bottom: 10px;
+    }
+    
+    #menu_modal .modal-body ul li #cta_nav{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #nv_bar .col-10, #nv_bar .navbar{
+        padding-left: 0;
+        padding-right: 0px;
+    }
+
+    #menu_nav{
+        display: inline-block;
+        font-size: 28px;
+        margin: 0;
+        color: whitesmoke;
     }
 
 }

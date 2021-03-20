@@ -82,6 +82,7 @@
                         <img id="l_st" style="width: 140px;" src="./images/logo.png" alt="Xurumin Logo">
                         <img id="l_white" style="width: 140px;" src="./images/logo_white.png" alt="Xurumin Logo">
                     </a>
+                    <i id="menu_nav" class="fas fa-bars" data-toggle="modal" data-target="#menu_modal"></i>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                         <ul class="navbar-nav ml-auto p-2">
                             <li class="nav-item active">
@@ -98,6 +99,42 @@
                         </ul>
                     </div>
                 </nav>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="navbar-nav ml-auto p-2">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/ptbr/comandos.html">
+                                Comandos
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" target="_blank" href="https://discord.com/invite/bvb8YKSCQR">
+                                Precisa de ajuda?
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" target="_blank" href="https://top.gg/bot/753723888671785042/vote">
+                                Vote e ajude o Xurumin!
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="cta_nav" target="_blank"
+                                href="https://discord.com/oauth2/authorize?client_id=753723888671785042&permissions=2080374975&scope=bot">
+                                <i class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
