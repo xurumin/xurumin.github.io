@@ -235,7 +235,10 @@
 
         window.onload = async () => {
             //run()
-            await showCategory("music")
+            start();
+            showCategory("music");
+        }
+        function start(){
             var i = 0
             for (var index in command_list) {
                 const category = command_list[index]
@@ -263,6 +266,7 @@
                 i += 1;
             }
         }
+        
     </script>
 
 
