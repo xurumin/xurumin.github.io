@@ -138,6 +138,25 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid" id="content">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-2" id="left">
+                <h3>Categorias</h3>
+
+                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
+                    Categorias <i class="fas fa-arrow-down"></i>
+                </button>
+
+                <ul id="cmd_cat">
+                </ul>
+            </div>
+            <div class="col-12 col-md-9" id="right">
+                <div id="mycnt">
+
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var command_list = {
             music: {
@@ -211,17 +230,10 @@
         }
 
         async function changeCategory(tag) {
-            if ((document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) || (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null)) return;
+            if (document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) return;
 
             document.getElementById(`cmd_${lastSelected}`).removeAttribute("selected")
             document.getElementById(`cmd_${tag}`).setAttribute("selected", "")
-
-
-            $('#category_modal').modal('hide')
-
-            document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
-            document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
-
             lastSelected = tag
             document.getElementById("mycnt").innerHTML = "Carregando comandos..."
             showCategory(tag)
@@ -235,7 +247,6 @@
 
             document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
             document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
-
             lastSelected = tag
             document.getElementById("mycnt").innerHTML = "Carregando comandos..."
             showCategory(tag)
@@ -245,6 +256,7 @@
             //run()
             start();
         }
+        showCategory("music");
         function start(){
             var i = 0
             for (var index in command_list) {
@@ -258,7 +270,7 @@
 
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
+                        `<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')" selected>${category.title}</li>`
                         )
                 } else {
                     //computer
@@ -267,34 +279,12 @@
 
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`
+                        `<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')">${category.title}</li>`
                         )
                 }
                 i += 1;
             }
         }
-    </script>
-    <div class="container-fluid" id="content">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-2" id="left">
-                <h3>Categorias</h3>
-
-                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
-                    Categorias <i class="fas fa-arrow-down"></i>
-                </button>
-
-                <ul id="cmd_cat">
-                </ul>
-            </div>
-            <div class="col-12 col-md-9" id="right">
-                <div id="mycnt">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        showCategory("music");
     </script>
     <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
