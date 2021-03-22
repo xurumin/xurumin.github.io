@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
      user-scalable=0'>
-    <title>Comandos - Xurumin</title>
-    <meta name="title" content="Comandos - Xurumin">
+    <title>Ajuda - Xurumin</title>
+    <meta name="title" content="Ajuda - Xurumin">
     <meta name="description" content="Um bot brasileiro que toca música (com playlists!) enquanto você joga com seus amigos e
     te deixa ouvir aquele podcast no fim de tarde. Além disso, também tenho memes e jogos!">
     <meta name="keywords"
         content="discord, bot, xurumin, diversão, entretenimento, jogos, musica, podcast, playlist, spotify, youtube, games">
-    <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Portuguese">
 
@@ -90,6 +89,11 @@
                                     Comandos
                                 </a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/ajuda">
+                                    Ajuda (FAQ)
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a id="cta_nav" target="_blank"
                                     href="https://discord.com/oauth2/authorize?client_id=753723888671785042&permissions=2080374975&scope=bot">
@@ -118,8 +122,8 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" target="_blank" href="https://discord.com/invite/bvb8YKSCQR">
-                                Precisa de ajuda?
+                            <a class="nav-link" href="/ajuda">
+                                Ajuda (FAQ)
                             </a>
                         </li>
                         <li class="nav-item active">
@@ -138,66 +142,15 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="content">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-2" id="left">
-                <h3>Categorias</h3>
-
-                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
-                    Categorias <i class="fas fa-arrow-down"></i>
-                </button>
-
-                <ul id="cmd_cat">
-                </ul>
-            </div>
-            <div class="col-12 col-md-9" id="right">
-                <div id="mycnt">
-
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
-        var command_list = {
-            music: {
-                title: "Música",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/music.md"
+        var help_list = {
+            help: {
+                title: "Ajuda",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/help/help.md"
             },
-            podcast: {
-                title: "Podcast",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/podcast.md"
-            },
-            memes: {
-                title: "Memes",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/memes.md"
-            },
-            image: {
-                title: "Imagens",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/image.md"
-            },
-            videos: {
-                title: "Vídeos",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/videos.md"
-            },
-            gifs: {
-                title: "Gifs",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/gifs.md"
-            },
-            games: {
-                title: "Jogos",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/games.md"
-            },
-            notifications: {
-                title: "Notificações",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/notifications.md"
-            },
-            social: {
-                title: "Social",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/social.md"
-            },
-            general: {
-                title: "Gerais",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/general.md"
+            howtogetcoins: {
+                title: "Como ganhar Xurumin Coins?",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/help/howtogetcoins.md"
             }
         }
 
@@ -212,43 +165,41 @@
                 xmlHttp.send(null);
             })
         }
-        var md = window.markdownit();
+        var md = window.markdownit({
+            html: true
+        });
         var lastSelected = ""
 
         async function showCategory(tag) {
-            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+            document.getElementById("cnt_help").innerHTML = "Carregando ajuda..."
 
-            const command = command_list[tag]
+            const help = help_list[tag]
 
-            document.getElementById("btn_cat").innerHTML = `${command.title} <i class="fas fa-chevron-down"></i>`
+            console.log(help);
 
-            var response = await httpGetAsync(command.url)
+            document.getElementById("btn_cat").innerHTML = `${help.title} <i class="fas fa-chevron-down"></i>`
+
+            var response = await httpGetAsync(help.url)
             var html = md.render(response);
 
             var m = html.split("<hr>")
-            document.getElementById("mycnt").innerHTML = html
+            document.getElementById("cnt_help").innerHTML = html
         }
 
         async function changeCategory(tag) {
-            if (document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) return;
+            if ((document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) || (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null)) return;
 
             document.getElementById(`cmd_${lastSelected}`).removeAttribute("selected")
             document.getElementById(`cmd_${tag}`).setAttribute("selected", "")
-            lastSelected = tag
-            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
-            showCategory(tag)
-        }
 
-        async function changeCategory_m(tag) {
-            if (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null) return;
 
-            //document.getElementById("category_modal").style.display = "hidden"
             $('#category_modal').modal('hide')
 
             document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
             document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
+
             lastSelected = tag
-            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+            document.getElementById("cnt_help").innerHTML = "Carregando comandos..."
             showCategory(tag)
         }
 
@@ -256,11 +207,10 @@
             //run()
             start();
         }
-        showCategory("music");
         function start(){
             var i = 0
-            for (var index in command_list) {
-                const category = command_list[index]
+            for (var index in help_list) {
+                const category = help_list[index]
                 if (i == 0) {
                     lastSelected = index
                     //computer
@@ -270,7 +220,7 @@
 
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')" selected>${category.title}</li>`
+                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
                         )
                 } else {
                     //computer
@@ -279,12 +229,34 @@
 
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory_m('${index}')">${category.title}</li>`
+                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`
                         )
                 }
                 i += 1;
             }
         }
+    </script>
+    <div class="container-fluid" id="content">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-2" id="left">
+                <h3>Categorias</h3>
+
+                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
+                    Categorias <i class="fas fa-arrow-down"></i>
+                </button>
+
+                <ul id="cmd_cat">
+                </ul>
+            </div>
+            <div class="col-12 col-md-8" id="right">
+                <div id="cnt_help">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        showCategory("help");
     </script>
     <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
