@@ -1,28 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://xurumin.github.io/</loc>
-  <lastmod>2021-03-22T18:15:46+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://xurumin.github.io/</loc>
+	<lastmod>2021-03-26T15:17:57+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xurumin.github.io/comandos</loc>
-  <lastmod>2021-03-22T18:15:46+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xurumin.github.io/comandos</loc>
+	<lastmod>2021-03-26T15:17:57+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xurumin.github.io/ajuda</loc>
-  <lastmod>2021-03-22T18:15:46+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xurumin.github.io/ajuda</loc>
+	<lastmod>2021-03-26T15:18:00+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://xurumin.github.io/termos</loc>
-  <lastmod>2021-03-22T18:15:46+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://xurumin.github.io/termos</loc>
+	<lastmod>2021-03-26T15:18:00+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
-
 </urlset>
