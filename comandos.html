@@ -143,46 +143,62 @@
         </div>
     </div>
     <script>
+        const copyToClipboard = (str, elm) => {
+            const el = document.createElement('textarea');
+            el.value = str;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            if(elm){
+                elm.title = "Copiado!"
+                setTimeout(() => {
+                    elm.title = "Clique para copiar"
+                }, 1000);
+            }
+        };
+
         var command_list = {
             music: {
                 title: "Música",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/music.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/music.json"
             },
             podcast: {
                 title: "Podcast",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/podcast.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/podcast.json"
             },
             memes: {
                 title: "Memes",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/memes.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/memes.json"
             },
             image: {
                 title: "Imagens",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/image.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/image.json"
             },
             videos: {
                 title: "Vídeos",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/videos.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/videos.json"
             },
             gifs: {
                 title: "Gifs",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/gifs.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/gifs.json"
             },
             games: {
                 title: "Jogos",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/games.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/games.json"
             },
             notifications: {
                 title: "Notificações",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/notifications.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/notifications.json"
             },
             social: {
                 title: "Social",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/social.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/social.json"
             },
             general: {
                 title: "Gerais",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/general.md"
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/general.json"
             }
         }
 
@@ -207,15 +223,17 @@
 
             document.getElementById("btn_cat").innerHTML = `${command.title} <i class="fas fa-chevron-down"></i>`
 
-            var response = await httpGetAsync(command.url)
-            var html = md.render(response);
-
-            var m = html.split("<hr>")
-            document.getElementById("mycnt").innerHTML = html
+            var response = JSON.parse(await httpGetAsync(command.url))
+            document.getElementById("mycnt").innerHTML = ""
+            for(var cmd of response){
+                var temp = generateCommand(cmd)
+                document.getElementById("mycnt").innerHTML += temp
+            }
         }
 
         async function changeCategory(tag) {
-            if ((document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) || (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null)) return;
+            if ((document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) || (document
+                    .getElementById(`m_cmd_${tag}`).getAttribute("selected") != null)) return;
 
             document.getElementById(`cmd_${lastSelected}`).removeAttribute("selected")
             document.getElementById(`cmd_${tag}`).setAttribute("selected", "")
@@ -231,25 +249,53 @@
             showCategory(tag)
         }
 
-        async function changeCategory_m(tag) {
-            if (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null) return;
 
-            //document.getElementById("category_modal").style.display = "hidden"
-            $('#category_modal').modal('hide')
+        function generateCommand(cmd) {
+            var examples = ""
+            var nsfw = ""
+            if(cmd.tags){
+                if(cmd.tags.includes("nsfw")){
+                    nsfw = "nsfw"
+                }
+            }
 
-            document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
-            document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
+            for (var elm of cmd.examples) {
+                examples +=
+                    `<li onclick="copyToClipboard(this.innerHTML, this)" title="Clique para copiar"">${elm}</li>\n`
+            }
+            var template = `<div class="animate__animated animate__fadeInUp command ${nsfw}" id="${cmd.name}">
+                        <div class="row justify-content-between align-items-center strt" onclick="showDet('${cmd.name}')">
+                            <div class="col-10 col-md-10 top">
+                                <div class="col-12 cmd_title">${cmd.name}</div>
+                                <div class="col-12 cmd_description">${cmd.description}</div>
+                            </div>
+                            <span class="nsfw_tag">🔞 NSFW</span>
+                            <div class="col-2 cmd_show">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                       </div>
+                        <div class="row justify-content-between align-items-center detail hide">
+                            <div class="col-12 col-md open">
+                                <p class="aliases_title">Sinônimos:</p>
+                                <p class="aliases">${cmd.aliases.join(", ")}</p>
 
-            lastSelected = tag
-            document.getElementById("mycnt").innerHTML = "Carregando comandos..."
-            showCategory(tag)
+                                <p class="exmp">Exemplos:</p>
+                                <ul>
+                                    ${examples}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>`
+
+            return template
         }
 
         window.onload = async () => {
             //run()
             start();
         }
-        function start(){
+
+        function start() {
             var i = 0
             for (var index in command_list) {
                 const category = command_list[index]
@@ -258,12 +304,12 @@
                     //computer
                     document.getElementById("cmd_cat").innerHTML += (
                         `<li id="cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
-                        )
+                    )
 
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
                         `<li id="m_cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
-                        )
+                    )
                 } else {
                     //computer
                     document.getElementById("cmd_cat").innerHTML += (
@@ -272,10 +318,24 @@
                     //mobile
                     document.getElementById("modal_cnt").innerHTML += (
                         `<li id="m_cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`
-                        )
+                    )
                 }
                 i += 1;
             }
+        }
+
+        function showDet(elm_id) {
+            var elm = document.getElementById(elm_id);
+
+            if (!elm.getElementsByClassName("detail")[0].classList.contains("hide")) {
+                elm.getElementsByClassName("cmd_show")[0].getElementsByClassName("fas")[0].classList.remove("rotated")
+                // elm.getElementsByClassName("cmd_show")[0].getElementsByClassName("fas")[0].classList.add("initial")
+                return elm.getElementsByClassName("detail")[0].classList.add("hide");
+                
+            }
+            elm.getElementsByClassName("cmd_show")[0].getElementsByClassName("fas")[0].classList.add("rotated")
+            // elm.getElementsByClassName("cmd_show")[0].getElementsByClassName("fas")[0].classList.remove("initial")
+            return elm.getElementsByClassName("detail")[0].classList.remove("hide");
         }
     </script>
     <div class="container-fluid" id="content">

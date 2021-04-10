@@ -427,59 +427,8 @@ a:hover {
 
 
 #mycnt {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 50px;
-}
-
-#mycnt td {
-    padding: 15px;
-    min-height: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#mycnt h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #2a2a44;
-}
-
-#mycnt h3 {
-    font-size: 25px;
-    padding-top: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    font-weight: 600;
-    color: #2a2a44;
-}
-
-#mycnt table {
-    margin-top: 15px;
-}
-
-#mycnt tr:nth-child(even) {
-    background: #FFF
-}
-
-#mycnt td {
-    font-size: 17px;
-}
-
-#mycnt tr:nth-child(odd) {
-    background: #EEE
-}
-
-#mycnt th {
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-    background-color: #726fd3;
-}
-
-#mycnt table {
-    table-layout: fixed;
-    width: 100%;
 }
 
 
@@ -592,6 +541,158 @@ a:hover {
     padding: 0px;
     font-size: 35px;
 }
+
+
+/* Categorias de comandos */
+    .command{
+        background-color: whitesmoke;
+        padding: 10px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        display: flexbox;
+    }
+    .nsfw_tag{
+        display: none;
+    }
+    .command.nsfw .nsfw_tag{
+        top: 0px;
+        right: 0px;
+
+        padding: 4px;
+        padding-bottom: 1px;
+        padding-top: 1px;
+        padding-left: 5px;
+
+        border-radius: 0 0 0 10px;
+
+        background-color: #e74c3c;
+
+        color: whitesmoke;
+
+        position: absolute;
+        float: right;
+        display: inline;
+        vertical-align: top;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .command .strt{
+        padding-bottom: 10px;
+        margin: 0;
+    }
+    .command .strt:hover{
+        cursor: pointer;
+    }
+    .command .cmd_title{
+        font-weight: 700;
+        color: #514F8C;
+        font-size: 20px;
+
+        padding: 0;
+    }
+
+    .command .cmd_description{
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .command .cmd_show{
+        font-size: 20px;
+        color: #726fd3;
+        text-align: right;
+    }
+    .command .cmd_show{
+        font-size: 20px;
+        color: #726fd3;
+        text-align: right;
+    }
+
+    .command .cmd_show .fas.rotated{
+        transform: rotate(180deg)
+    }
+    .command .cmd_show .fas{
+        transition: transform .3s ease-in-out;
+    }
+
+    .command .open .exmp{
+        margin: 0;
+        margin-top: 10px;
+
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .command .detail{
+        border-top: 0.5px solid rgb(202, 202, 202);
+        margin: 0;
+    }
+    .command .detail.hide{
+        display: none;
+        opacity: 0;
+
+        transition: opacity 0s linear;
+    }
+    .command .detail{
+        opacity: 1;
+
+        transition: opacity .5s ease, height .5s;
+    }
+
+    .command .open .aliases_title{
+        margin: 0;
+        margin-top: 15px;
+
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .command .open .aliases{
+        margin: 0;
+        color: #2a2a44;
+
+        font-weight: 400;
+        font-size: 14px ;
+
+        background-color: #e7e7e7;
+
+        width: fit-content;
+
+        padding: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .command .open ul li{
+        list-style: none;
+        font-weight: 400;
+        background-color: #e7e7e7;
+        
+        color: #2a2a44;
+        margin-top: 5px;
+        font-size: 14px ;
+
+        width: fit-content;
+        max-width: 100%;
+
+        word-wrap: break-word;
+
+        padding: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+
+        cursor: pointer;
+    }
+    .command .open ul{
+        margin: 0;
+        padding: 0;
+
+        margin-bottom: 10px;
+    }
 
 
 /* MOBILE VERSION */
@@ -760,18 +861,6 @@ a:hover {
     #content #right {
         margin: 0;
         padding: 0;
-    }
-
-
-    #mycnt td {
-        font-size: 13px;
-    }
-
-    #mycnt h2 {
-        padding-left: 10px;
-    }
-    #mycnt blockquote{
-        padding-left: 10px;
     }
     #content #title,
     #content #description,
