@@ -169,7 +169,14 @@ a:hover {
 }
 
 .cta_error {
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    
+    font-weight: 600;
+    border-radius: 12px;
+
+    margin-top: 00px;
 
     background-color: #514F8C;
     color: white;
@@ -179,15 +186,16 @@ a:hover {
     padding-right: 15px;
 
     /* width: 40%; */
-    float: left;
+    /* float: left; */
 
     transition: background-color 1s;
     transition: color 1s;
+
+    float: left;
 }
 
 .cta_error:hover {
-    border: 1px solid #43426d;
-    box-shadow: 0px 0px 0px 2px #43426d inset;
+    box-shadow: 0px 0px 0px 3px #43426d inset;
     color: #43426d;
     background-color: transparent;
     ;
@@ -754,6 +762,10 @@ a:hover {
     #subtitle {
         display: none;
     }
+    #p404 #subtitle {
+        text-align: center;
+        display: inline-block;
+    }
 
     #l_white {
         display: block;
@@ -1103,6 +1115,24 @@ a:hover {
 
     #cnt_help h2 {
         font-size: 35px;
+    }
+
+    #p404 #cct {
+        margin-top: -40px;
+    }
+
+    #p404 .cta_error {
+        float: none;
+        
+    }
+
+    #p404 #subtitle{
+        margin-bottom: 30px;
+    }
+
+    #p404 #sp_img{
+        margin: 20px;
+        max-width: 90vw;
     }
 
 }
