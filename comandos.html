@@ -215,7 +215,11 @@
         var lastSelected = ""
 
         async function showCategory(tag) {
+            if(!command_list[tag]) tag="music"
+
             document.getElementById("mycnt").innerHTML = "Carregando comandos..."
+
+            await changeCategory(tag)
 
             const command = command_list[tag]
 
@@ -290,7 +294,8 @@
 
         window.onload = async () => {
             //run()
-            start();
+            await start();
+            showCategory(window.location.href.split("#")[1] || "music");
         }
 
         function start() {
@@ -355,9 +360,6 @@
             </div>
         </div>
     </div>
-    <script>
-        showCategory("music");
-    </script>
     <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -422,7 +424,7 @@
             </div>
         </div>
     </div>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js'></script>
 </body>
