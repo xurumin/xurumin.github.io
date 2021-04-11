@@ -83,7 +83,7 @@ a:hover {
     background-image: linear-gradient(to bottom right, #20bbe2, #af1695); */
 }
 
-#menu_nav{
+#menu_nav {
     display: none;
 }
 
@@ -166,6 +166,33 @@ a:hover {
 
     transition: background-color 1s;
     transition: color 1s;
+}
+
+.cta_error {
+    margin-top: 20px;
+
+    background-color: #514F8C;
+    color: white;
+
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* width: 40%; */
+    float: left;
+
+    transition: background-color 1s;
+    transition: color 1s;
+}
+
+.cta_error:hover {
+    border: 1px solid #43426d;
+    box-shadow: 0px 0px 0px 2px #43426d inset;
+    color: #43426d;
+    background-color: transparent;
+    ;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
 }
 
 #cta_top:hover {
@@ -438,7 +465,8 @@ a:hover {
     font-size: 17px;
     font-weight: 500;
 }
-#cnt_help h2{
+
+#cnt_help h2 {
     color: #514F8C;
     font-weight: 700;
     font-size: 45px;
@@ -446,7 +474,8 @@ a:hover {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-#cnt_help h3{
+
+#cnt_help h3 {
     color: #43426d;
     font-weight: 600;
 }
@@ -520,23 +549,25 @@ a:hover {
     padding-right: 20px;
     margin-bottom: 100px;
 }
-#content #left h3{
+
+#content #left h3 {
     margin-bottom: 15px;
 }
 
-#content #right {
-}
+#content #right {}
 
 #content #left #btn_cat {
     display: none;
 }
-#top_arrow_down{
+
+#top_arrow_down {
     margin: 0px;
     margin-top: 80px;
     padding: 0px;
     color: #514F8C;
 }
-#top_arrow_down i{
+
+#top_arrow_down i {
     margin: 0px;
     padding: 0px;
     font-size: 35px;
@@ -544,155 +575,170 @@ a:hover {
 
 
 /* Categorias de comandos */
-    .command{
-        background-color: whitesmoke;
-        padding: 10px;
+.command {
+    background-color: whitesmoke;
+    padding: 10px;
 
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
 
-        margin-top: 10px;
-        margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-        display: flexbox;
-    }
-    .nsfw_tag{
-        display: none;
-    }
-    .command.nsfw .nsfw_tag{
-        top: 0px;
-        right: 0px;
+    display: flexbox;
+}
 
-        padding: 4px;
-        padding-bottom: 1px;
-        padding-top: 1px;
-        padding-left: 5px;
+.nsfw_tag {
+    display: none;
+}
 
-        border-radius: 0 0 0 10px;
+.command.nsfw .nsfw_tag {
+    top: 0px;
+    right: 0px;
 
-        background-color: #e74c3c;
+    padding: 4px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    padding-left: 5px;
 
-        color: whitesmoke;
+    border-radius: 0 0 0 10px;
 
-        position: absolute;
-        float: right;
-        display: inline;
-        vertical-align: top;
-        font-weight: 500;
-        font-size: 12px;
-    }
-    .command .strt{
-        padding-bottom: 10px;
-        margin: 0;
-    }
-    .command .strt:hover{
-        cursor: pointer;
-    }
-    .command .cmd_title{
-        font-weight: 700;
-        color: #514F8C;
-        font-size: 20px;
+    background-color: #e74c3c;
 
-        padding: 0;
-    }
+    color: whitesmoke;
 
-    .command .cmd_description{
-        font-size: 16px;
-        padding: 0;
-    }
+    position: absolute;
+    float: right;
+    display: inline;
+    vertical-align: top;
+    font-weight: 500;
+    font-size: 12px;
+}
 
-    .command .cmd_show{
-        font-size: 20px;
-        color: #726fd3;
-        text-align: right;
-    }
-    .command .cmd_show{
-        font-size: 20px;
-        color: #726fd3;
-        text-align: right;
-    }
+.command .strt {
+    padding-bottom: 10px;
+    margin: 0;
+}
 
-    .command .cmd_show .fas.rotated{
-        transform: rotate(180deg)
-    }
-    .command .cmd_show .fas{
-        transition: transform .3s ease-in-out;
-    }
+.command .strt:hover {
+    cursor: pointer;
+}
 
-    .command .open .exmp{
-        margin: 0;
-        margin-top: 10px;
+.command .cmd_title {
+    font-weight: 700;
+    color: #514F8C;
+    font-size: 20px;
 
-        font-size: 15px;
-        font-weight: 600;
-    }
-    .command .detail{
-        border-top: 0.5px solid rgb(202, 202, 202);
-        margin: 0;
-    }
-    .command .detail.hide{
-        display: none;
-        opacity: 0;
+    padding: 0;
+}
 
-        transition: opacity 0s linear;
-    }
-    .command .detail{
-        opacity: 1;
+.command .cmd_description {
+    font-size: 16px;
+    padding: 0;
+}
 
-        transition: opacity .5s ease, height .5s;
-    }
+.command .cmd_show {
+    font-size: 20px;
+    color: #726fd3;
+    text-align: right;
+}
 
-    .command .open .aliases_title{
-        margin: 0;
-        margin-top: 15px;
+.command .cmd_show {
+    font-size: 20px;
+    color: #726fd3;
+    text-align: right;
+}
 
-        font-size: 15px;
-        font-weight: 600;
-    }
+.command .cmd_show .fas.rotated {
+    transform: rotate(180deg)
+}
 
-    .command .open .aliases{
-        margin: 0;
-        color: #2a2a44;
+.command .cmd_show .fas {
+    transition: transform .3s ease-in-out;
+}
 
-        font-weight: 400;
-        font-size: 14px ;
+.command .open .exmp {
+    margin: 0;
+    margin-top: 10px;
 
-        background-color: #e7e7e7;
+    font-size: 15px;
+    font-weight: 600;
+}
 
-        width: fit-content;
+.command .detail {
+    border-top: 0.5px solid rgb(202, 202, 202);
+    margin: 0;
+}
 
-        padding: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
+.command .detail.hide {
+    display: none;
+    opacity: 0;
 
-    .command .open ul li{
-        list-style: none;
-        font-weight: 400;
-        background-color: #e7e7e7;
-        
-        color: #2a2a44;
-        margin-top: 5px;
-        font-size: 14px ;
+    transition: opacity 0s linear;
+}
 
-        width: fit-content;
-        max-width: 100%;
+.command .detail {
+    opacity: 1;
 
-        word-wrap: break-word;
+    transition: opacity .5s ease, height .5s;
+}
 
-        padding: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
+.command .open .aliases_title {
+    margin: 0;
+    margin-top: 15px;
 
-        cursor: pointer;
-    }
-    .command .open ul{
-        margin: 0;
-        padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
 
-        margin-bottom: 10px;
-    }
+.command .open .aliases {
+    margin: 0;
+    color: #2a2a44;
+
+    font-weight: 400;
+    font-size: 14px;
+
+    background-color: #e7e7e7;
+
+    width: fit-content;
+
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.command .open ul li {
+    list-style: none;
+    font-weight: 400;
+    background-color: #e7e7e7;
+
+    color: #2a2a44;
+    margin-top: 5px;
+    font-size: 14px;
+
+    width: fit-content;
+    max-width: 100%;
+
+    word-wrap: break-word;
+
+    padding: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    cursor: pointer;
+}
+
+.command .open ul {
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 10px;
+}
+
+#p404 #cct {
+    margin-top: 50px;
+}
 
 
 /* MOBILE VERSION */
@@ -763,6 +809,12 @@ a:hover {
 
     #right-side #sp_img {
         height: 40vh;
+    }
+
+
+
+    #right_side_404 #sp_img {
+        height: 30vh;
     }
 
     #cta_top {
@@ -862,6 +914,7 @@ a:hover {
         margin: 0;
         padding: 0;
     }
+
     #content #title,
     #content #description,
     #content #bq {
@@ -950,35 +1003,36 @@ a:hover {
     #content #left #cmd_cat {
         display: none;
     }
-    #content #left h3{
+
+    #content #left h3 {
         margin-bottom: 5px;
     }
 
-    
+
 
     #category_modal #modal_cnt li {
         list-style: none;
         font-size: 16px;
         font-weight: 500;
-    
+
         padding-top: 8px;
         padding-bottom: 8px;
-    
+
         margin-top: 6px;
         margin-bottom: 6px;
-    
+
         border-radius: 20px;
         padding-left: 15px;
-    
+
         transition: background 0.2s;
     }
-    
+
     #category_modal #modal_cnt li:hover {
         background-color: #ebebeb;
         cursor: pointer;
         transition: background 0.2s;
     }
-    
+
     #category_modal #modal_cnt li[selected] {
         color: whitesmoke;
         font-weight: 600;
@@ -990,49 +1044,56 @@ a:hover {
         /* background: #514F8C; */
         padding: 0;
     }
-    #menu_nav{
+
+    #menu_nav {
         display: none;
     }
-    
-    .modal-header{
+
+    .modal-header {
         border: none;
     }
-    #menu_modal .modal-body{
+
+    #menu_modal .modal-body {
         margin: 0;
         padding: 0;
     }
-    #menu_modal .modal-body .nav-item{
+
+    #menu_modal .modal-body .nav-item {
         margin: 0 auto;
-    
+
     }
-    #menu_modal .modal-body ul{
-    }
-    
-    #menu_modal .modal-body ul li .nav-link{
+
+    #menu_modal .modal-body ul {}
+
+    #menu_modal .modal-body ul li .nav-link {
         color: #2a2a44;
         font-weight: 600;
         font-size: 17px;
     }
-    #menu_modal .modal-body ul li{
+
+    #menu_modal .modal-body ul li {
         padding-bottom: 10px;
     }
-    
-    #menu_modal .modal-body ul li #cta_nav{
+
+    #menu_modal .modal-body ul li #cta_nav {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    #nv_bar .col-10, #nv_bar .navbar{
+
+    #nv_bar .col-10,
+    #nv_bar .navbar {
         padding-left: 0;
         padding-right: 0px;
     }
 
-    #menu_nav{
+    #menu_nav {
         display: inline-block;
         font-size: 28px;
         margin: 0;
         color: whitesmoke;
     }
-    #cnt_help{
+
+    #cnt_help {
         padding-left: 10px;
         padding-right: 10px;
 
@@ -1040,7 +1101,7 @@ a:hover {
         font-weight: 500;
     }
 
-    #cnt_help h2{
+    #cnt_help h2 {
         font-size: 35px;
     }
 
