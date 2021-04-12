@@ -71,7 +71,7 @@
     <script src="https://kit.fontawesome.com/6fc5325808.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="pcomandos">
     <div class="container-fluid" id="top_bar_2">
         <div class="row justify-content-center" id="nv_bar">
             <div class="col-10">
@@ -142,7 +142,8 @@
         </div>
     </div>
     <script>
-        const copyToClipboard = (str, elm) => {
+        var isClicked = false
+        const copyToClipboard = (str, elm, event) => {
             const el = document.createElement('textarea');
             el.value = str;
             document.body.appendChild(el);
@@ -156,6 +157,28 @@
                     elm.title = "Clique para copiar"
                 }, 1000);
             }
+
+            var copyMsg = document.createElement("div")
+            copyMsg.id = "copyMsg"
+            copyMsg.innerHTML = "Copiado!"
+            copyMsg.style.position = "absolute"
+            copyMsg.style.display = "inline"
+            // copyMsg.style.top = "0px"
+            copyMsg.style.top = `${event.pageY-35}px`
+            copyMsg.style.left = `${event.pageX-20}px`
+
+            console.log(event);
+            
+            if(!isClicked){
+                document.getElementById("pcomandos").appendChild(copyMsg)
+                setTimeout(()=>{
+                    isClicked = false
+                    document.getElementById("pcomandos").removeChild(copyMsg)
+                }, 700)
+
+            }
+            
+            isClicked = true
         };
 
         var command_list = {
@@ -263,7 +286,7 @@
 
             for (var elm of cmd.examples) {
                 examples +=
-                    `<li onclick="copyToClipboard(this.innerHTML, this)" title="Clique para copiar"">${elm}</li>\n`
+                    `<li onclick="copyToClipboard(this.innerHTML, this, event)" title="Clique para copiar"">${elm}</li>\n`
             }
             var template = `<div class="animate__animated animate__fadeInUp command ${nsfw}" id="${cmd.name}">
                         <div class="row justify-content-between align-items-center strt" onclick="showDet('${cmd.name}')">
