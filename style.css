@@ -129,6 +129,7 @@ a:hover {
 
 #right-side #sp_img {
     height: 70vh;
+    width: auto;
     /* transition: transform 0.5s;
     -webkit-transition: transform 0.5s; */
 }

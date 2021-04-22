@@ -1,24 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-		
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://xurumin.github.io/</loc>
-	<lastmod>2021-03-26T15:17:57+01:00</lastmod>
+	<lastmod>2021-04-22</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://xurumin.github.io/comandos</loc>
-	<lastmod>2021-03-26T15:17:57+01:00</lastmod>
+	<lastmod>2021-04-22</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://xurumin.github.io/ajuda</loc>
 	<lastmod>2021-03-26T15:18:00+01:00</lastmod>
-	<priority>1.0</priority>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://xurumin.github.io/termos</loc>
 	<lastmod>2021-03-26T15:18:00+01:00</lastmod>
-	<priority>1.0</priority>
+	<priority>0.8</priority>
 </url>
 </urlset>
