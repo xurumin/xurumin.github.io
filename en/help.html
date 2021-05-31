@@ -144,12 +144,12 @@
     <script>
         var help_list = {
             help: {
-                title: "help",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/help/help.md"
+                title: "Help",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/help.md"
             },
             howtogetcoins: {
-                title: "Como ganhar Xurumin Coins?",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/help/howtogetcoins.md"
+                title: "How to earn Xurumin Coins?",
+                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/howtogetcoins.md"
             }
         }
 
@@ -173,8 +173,6 @@
             document.getElementById("cnt_help").innerHTML = "Carregando help..."
 
             const help = help_list[tag]
-
-            console.log(help);
 
             document.getElementById("btn_cat").innerHTML = `${help.title} <i class="fas fa-chevron-down"></i>`
 

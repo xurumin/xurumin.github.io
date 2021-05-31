@@ -3,3 +3,7 @@ https://xurumin.github.io/comandos
 https://xurumin.github.io/ajuda
 https://xurumin.github.io/termos
 https://xurumin.github.io/addxurumin
+https://xurumin.github.io/en/
+https://xurumin.github.io/en/commands
+https://xurumin.github.io/en/help
+https://xurumin.github.io/en/addxurumin
