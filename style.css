@@ -307,6 +307,8 @@ a:hover {
     flex-direction: row-reverse;
 }
 
+
+
 .imsl {}
 
 .imsl:hover {}
@@ -413,6 +415,9 @@ a:hover {
     transition: background-color 0.5s;
     transition: color 0.5s;
 }
+
+
+
 
 #footer {
     background-color: #43426d;
