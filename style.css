@@ -331,7 +331,7 @@ a:hover {
     background-color: #514F8C;
     height: fit-content;
 
-    padding: 40px;
+    padding: 10px;
     padding-left: 80px;
     padding-right: 80px;
 }
@@ -356,7 +356,7 @@ a:hover {
 }
 
 #add_cta #cat img {
-    height: 400px;
+    height: 500px;
     width: auto;
 }
 

@@ -47,10 +47,10 @@ $(document).ready(function () {
 
 });
 
-async function isPrivate(){
-    const isPrivateModeOn = await isPrivateMode()
-    if(isPrivateModeOn){
-        $("#sp_img").attr("src", "/images/xurumin_and_garfield_private.png")
-    }
-}
-isPrivate()
+// async function isPrivate(){
+//     const isPrivateModeOn = await isPrivateMode()
+//     if(isPrivateModeOn){
+//         $("#sp_img").attr("src", "/images/xurumin_and_garfield_private.png")
+//     }
+// }
+// isPrivate()
