@@ -23,8 +23,8 @@ $(document).ready(function () {
                 $(this).addClass("animate__animated animate__fadeInUp");
             }
         }
-    }); 
-    
+    });
+
     // If element is scrolled into view, fade it in
     $(window).scroll(function () {
         $(".cardd").each(function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
                     $(this).addClass("animate__animated animate__fadeInUp");
                 }
             }
-        }); 
+        });
     });
 
 });
@@ -50,7 +50,7 @@ $(document).ready(function () {
 async function isPrivate(){
     const isPrivateModeOn = await isPrivateMode()
     if(isPrivateModeOn){
-        $("#sp_img").attr("src", "/images/catcom.png")
+        $("#sp_img").attr("src", "/images/xurumin_and_garfield_private.png")
     }
 }
 isPrivate()

@@ -239,6 +239,8 @@ a:hover {
 }
 
 .wave-top{
+    width: 100vw;
+    margin-top: -2px;
     transform: scaleY(-1);
     margin-bottom: 20px;
     /* height: 100%; */
