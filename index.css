@@ -456,7 +456,7 @@ a:hover {
     /* background-color: #f5e2c6; */
     background-color: #5d5ca5;
     padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 }
 
 .testimonials .card {
@@ -880,5 +880,8 @@ a:hover {
 @media (min-width: 1200px) {
     .testimonials .card-columns{
         column-count: 3;
+    }
+    .testimonials{
+        padding-bottom: 100px;
     }
 }
