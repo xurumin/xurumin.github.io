@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     display: block;
 
@@ -519,15 +519,13 @@ a:hover {
 
     #top_bar {
         margin: 0;
-        padding: 0;
+        /* padding: 0; */
         height: fit-content;
     }
 
     #subtitle_mobile {
         display: block;
     }
-
-    #cct {}
 
 
     .navbar-brand {
