@@ -1155,3 +1155,10 @@ a:hover {
     }
 
 }
+
+
+@media (min-width: 992px) {
+    #content {
+        margin-top: 20px;
+    }
+}
