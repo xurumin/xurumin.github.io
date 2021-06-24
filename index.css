@@ -161,6 +161,7 @@ a:hover {
 
 #cta_top {
     margin-top: 20px;
+    margin-right: 10px;
 
     background-color: #514F8C;
     color: white;
@@ -188,7 +189,6 @@ a:hover {
 
 #cta_top_sec {
     margin-top: 20px;
-    margin-left: 10px;
 
     background-color: transparent;
     border: 1px solid #43426d;
@@ -237,6 +237,7 @@ a:hover {
     padding-right: 25px;
     background-color: white;
     margin: 0;
+    min-width: max-content;
 }
 
 .wave-top{
@@ -373,7 +374,7 @@ a:hover {
 
 #add_cta #cta_top_sec {
     margin-top: 20px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 
     background-color: transparent;
     border: 1px solid whitesmoke;
@@ -521,6 +522,7 @@ a:hover {
     #top_bar {
         margin: 0;
         padding: 15px;
+        padding-top: 0px;
         height: fit-content;
     }
 
