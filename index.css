@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     display: block;
 
@@ -81,7 +81,7 @@ a:hover {
 
 #top_bar {
     margin: 0;
-    padding: 0;
+    /* padding: 0px; */
     min-height: 100vh;
     text-align: center;
     max-width: 100%;
@@ -241,7 +241,7 @@ a:hover {
 }
 
 .wave-top{
-    width: 100vw;
+    /* width: 100vw; */
     margin-top: -2px;
     transform: scaleY(-1);
     margin-bottom: 20px;
@@ -260,7 +260,7 @@ a:hover {
 }
 
 #boxes .text {
-    padding-right: 50px;
+    /* padding-right: 50px; */
 }
 
 #boxes .items h1 {
@@ -290,6 +290,11 @@ a:hover {
     flex-direction: row-reverse;
 }
 
+#boxes .image {
+    margin-bottom: 40px;
+    width: 250px;
+    /* transition: transform 0.2s; */
+}
 
 
 .imsl {}
@@ -500,6 +505,37 @@ a:hover {
     margin-bottom: 50px;
 }
 
+#boxes .btn {
+    /* margin-top: 20px; */
+    font-weight: 600;
+
+    background-color: #5d5ca5;
+    color: white;
+
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    width: 90vw;
+    float: left;
+
+    transition: background-color 1s;
+    transition: color 1s;
+
+    border-radius: 10px;
+}
+#boxes .btn:hover {
+    border: 1px solid #5d5ca5;
+    box-shadow: 0px 0px 0px 2px #5d5ca5 inset;
+    color: #5d5ca5;
+
+    background-color: transparent;
+
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+
+
 
 /* MOBILE VERSION */
 @media only screen and (max-width: 767px) {
@@ -599,7 +635,6 @@ a:hover {
     #boxes {
         padding-top: 50px;
         padding-bottom: 50px;
-
     }
 
     #boxes .items {
@@ -607,14 +642,14 @@ a:hover {
         margin: 0;
         padding: 0;
 
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 70px;
+        margin-bottom: 70px;
 
     }
 
     #boxes .text {
         text-align: left;
-        padding-right: 0px;
+        /* padding-right: 0px; */
     }
 
     .items .text h {
@@ -863,6 +898,12 @@ a:hover {
     .testimonials .card-columns{
         /* column-count: 1; */
     }
+    #boxes .btn {
+        margin-top: 0px;
+    
+        width: auto;
+        float: left;
+    }
 
 }
 
@@ -875,6 +916,25 @@ a:hover {
         width: 80vw;
         margin: 0 auto;
         column-count: 2;
+    }
+
+    #boxes .btn {
+        margin-top: 0px;
+    
+        width: auto;
+        float: left;
+    }
+
+    #boxes .image {
+        margin-bottom: 0px;
+        width: 350px;
+        /* transition: transform 0.2s; */
+    }
+
+    #boxes .items {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
     }
 }
 
