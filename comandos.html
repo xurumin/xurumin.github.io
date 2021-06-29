@@ -166,8 +166,6 @@
             // copyMsg.style.top = "0px"
             copyMsg.style.top = `${event.pageY-35}px`
             copyMsg.style.left = `${event.pageX-20}px`
-
-            console.log(event);
             
             if(!isClicked){
                 document.getElementById("pcomandos").appendChild(copyMsg)
@@ -286,7 +284,7 @@
 
             for (var elm of cmd.examples) {
                 examples +=
-                    `<li onclick="copyToClipboard(this.innerHTML, this, event)" title="Clique para copiar"">${elm}</li>\n`
+                    `<li onclick="copyToClipboard(this.innerHTML, this, event)" title="Clique para copiar"">x!${elm}</li>\n`
             }
             var template = `<div class="animate__animated animate__fadeInUp command ${nsfw}" id="${cmd.name}">
                         <div class="row justify-content-between align-items-center strt" onclick="showDet('${cmd.name}')">
