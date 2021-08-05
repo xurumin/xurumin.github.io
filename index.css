@@ -22,6 +22,9 @@ body {
 }
 
 a {
+    /* border-style: solid;4 */
+    /* border-bottom-width: 2px; */
+
     text-decoration: none;
     /* no underline */
 }
@@ -29,6 +32,17 @@ a {
 a:hover {
     text-decoration: none;
     /* no underline */
+}
+
+
+#background{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #F2F2F2 ;
+    top: 0;
+    left: 0;
 }
 
 #nv_bar a.nav-link {
@@ -85,7 +99,7 @@ a:hover {
     min-height: 100vh;
     text-align: center;
     max-width: 100%;
-    background-color: #F2F2F2;
+    /* background-color: #F2F2F2; */
     /* background-color: rgb(255, 246, 231);
     background-image: linear-gradient(to bottom right, #20bbe2, #af1695); */
 }
@@ -242,7 +256,7 @@ a:hover {
 
 .wave-top{
     /* width: 100vw; */
-    margin-top: -2px;
+    margin-top: 0px;
     transform: scaleY(-1);
     margin-bottom: 20px;
     /* height: 100%; */

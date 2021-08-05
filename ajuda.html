@@ -183,8 +183,6 @@
 
             const help = help_list[tag]
 
-            console.log(help);
-
             document.getElementById("btn_cat").innerHTML = `${help.title} <i class="fas fa-chevron-down"></i>`
 
             var response = await httpGetAsync(help.url)
