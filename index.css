@@ -38,7 +38,7 @@ a:hover {
 #background{
     z-index: -1;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     background-color: #F2F2F2 ;
     top: 0;
@@ -99,7 +99,7 @@ a:hover {
     min-height: 100vh;
     text-align: center;
     max-width: 100%;
-    /* background-color: #F2F2F2; */
+    /* background-color: #F2F2F2;  */
     /* background-color: rgb(255, 246, 231);
     background-image: linear-gradient(to bottom right, #20bbe2, #af1695); */
 }
@@ -555,10 +555,12 @@ a:hover {
 @media only screen and (max-width: 767px) {
     #nv_bar {
         background-color: #43426d;
-        padding: 3px;
+        padding: 0px;
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
     }
-
+    .wave-top{
+        margin-top: -3px;
+    }
     #top_arrow_down,
     #l_st,
     #subtitle {
@@ -574,6 +576,7 @@ a:hover {
         padding: 15px;
         padding-top: 0px;
         height: fit-content;
+        background-color: #F2F2F2 ;
     }
 
     #subtitle_mobile {
@@ -589,23 +592,23 @@ a:hover {
     #top_nav_ic {}
 
     #left-side #title {
-        margin-top: 30px;
+        margin-top: 0px;
         margin-bottom: 10px;
         font-weight: 700;
         text-align: center;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     #left-side #subtitle_mobile {
         margin-top: 10px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 15px;
     }
 
 
     #left-side {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 30px;
 
         display: inline-block;
