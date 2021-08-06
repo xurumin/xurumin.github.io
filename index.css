@@ -9,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     display: block;
 
@@ -37,7 +37,7 @@ a:hover {
 
 #background{
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     position: absolute;
     background-color: #F2F2F2 ;
