@@ -11,7 +11,6 @@ var visibleY = function(el){
     // Check its within the document viewport
     return top <= document.documentElement.clientHeight;
 };
-
 window.addEventListener("load",function(){
     var sheet = document.createElement('style')
     sheet.innerHTML = ".hidden {visibility: hidden;}";
@@ -22,8 +21,15 @@ window.addEventListener("load",function(){
         if (visibleY(elm) === true) {
             if(elm.classList.contains(elm.getAttribute("anmt"))) return;
             if(!elm.classList.contains("animate__animated")) elm.classList.add("animate__animated")
-            elm.classList.remove("hidden")
-            elm.classList.add(elm.getAttribute("anmt"))
+            if(elm.hasAttribute("anmt_delay")){
+                setTimeout(()=>{
+                    elm.classList.remove("hidden")
+                    elm.classList.add(elm.getAttribute("anmt"))
+                }, Number.parseInt(elm.getAttribute("anmt_delay")))
+            }else{
+                elm.classList.remove("hidden")
+                elm.classList.add(elm.getAttribute("anmt"))
+            }
         }
     })
     document.addEventListener("scroll", ()=>{
@@ -31,8 +37,15 @@ window.addEventListener("load",function(){
             if (visibleY(elm) === true) {
                 if(elm.classList.contains(elm.getAttribute("anmt"))) return;
                 if(!elm.classList.contains("animate__animated")) elm.classList.add("animate__animated")
-                elm.classList.remove("hidden")
-                elm.classList.add(elm.getAttribute("anmt"))
+                if(elm.hasAttribute("anmt_delay")){
+                    setTimeout(()=>{
+                        elm.classList.remove("hidden")
+                        elm.classList.add(elm.getAttribute("anmt"))
+                    }, Number.parseInt(elm.getAttribute("anmt_delay")))
+                }else{
+                    elm.classList.remove("hidden")
+                    elm.classList.add(elm.getAttribute("anmt"))
+                }
             }
         })
     })
