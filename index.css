@@ -149,7 +149,9 @@ a:hover {
 }
 
 #right-side #sp_img {
-    height: 70vh;
+    height: 100%;
+    max-height: 70vh;
+    max-width: 100%;
     width: auto;
     /* transition: transform 0.5s;
     -webkit-transition: transform 0.5s; */
@@ -358,8 +360,10 @@ a:hover {
 }
 
 #add_cta #cat img {
-    height: 500px;
+    height: 100%;
+    max-height: 500px;
     width: auto;
+    max-width: 100%;
 }
 
 #add_cta #cta_top {
