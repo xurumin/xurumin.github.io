@@ -16,12 +16,12 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     /* no underline */
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
     /* no underline */
 }
 

@@ -14,7 +14,11 @@ body {
     display: block;
 
     font-family: 'Montserrat', sans-serif;
+}
 
+:root{
+    --main-purple: #5d5ca5;
+    --main-white: #F2F2F2;
 }
 
 .hidden{
@@ -40,7 +44,7 @@ a:hover {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: #F2F2F2 ;
+    background-color: var(--main-white) ;
     top: 0;
     left: 0;
 }
@@ -99,7 +103,7 @@ a:hover {
     min-height: 100vh;
     text-align: center;
     max-width: 100%;
-    /* background-color: #F2F2F2;  */
+    /* background-color: var(--main-white);  */
     /* background-color: rgb(255, 246, 231);
     background-image: linear-gradient(to bottom right, #20bbe2, #af1695); */
 }
@@ -479,7 +483,7 @@ a:hover {
 
 .testimonials {
     /* background-color: #f5e2c6; */
-    background-color: #5d5ca5;
+    background-color: var(--main-purple);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -527,7 +531,7 @@ a:hover {
     /* margin-top: 20px; */
     font-weight: 600;
 
-    background-color: #5d5ca5;
+    background-color: var(--main-purple);
     color: white;
 
     padding: 8px;
@@ -538,14 +542,13 @@ a:hover {
     float: left;
 
     transition: background-color 1s;
-    transition: color 1s;
 
     border-radius: 10px;
 }
 #boxes .btn:hover {
-    border: 1px solid #5d5ca5;
-    box-shadow: 0px 0px 0px 2px #5d5ca5 inset;
-    color: #5d5ca5;
+    border: 1px solid var(--main-purple);
+    box-shadow: 0px 0px 0px 2px var(--main-purple) inset;
+    color: var(--main-purple);
 
     background-color: transparent;
 
@@ -580,7 +583,7 @@ a:hover {
         padding: 15px;
         padding-top: 0px;
         height: fit-content;
-        background-color: #F2F2F2 ;
+        background-color: var(--main-white) ;
     }
 
     #subtitle_mobile {
