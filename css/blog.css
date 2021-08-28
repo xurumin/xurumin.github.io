@@ -115,7 +115,7 @@ p {
 #blog_content h1 {
     color: #8A43A9;
     margin-top: 0;
-    font-size: 2.052rem;
+    font-size: 32px;
     font-weight: 700 !important;
 }
 
@@ -134,7 +134,9 @@ p {
 #blog_content h5 {
     font-size: 1.25rem;
 }
-
+#blog_content{
+    word-wrap: break-word;
+}
 #blog_content #description {
     font-weight: 400;
     color: #717171;
