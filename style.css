@@ -608,12 +608,12 @@ a:hover {
 }
 
 .command.nsfw .nsfw_tag {
-    top: 0px;
-    right: 0px;
+    top: -10px;
+    right: -10px;
 
     padding: 4px;
     padding-bottom: 1px;
-    padding-top: 1px;
+    padding-top: 0px;
     padding-left: 5px;
 
     border-radius: 0 0 0 10px;
@@ -633,6 +633,7 @@ a:hover {
 .command .strt {
     padding-bottom: 10px;
     margin: 0;
+    position: relative;
 }
 
 .command .strt:hover {
