@@ -101,10 +101,10 @@ var command_list = {
         title: "Imagens",
         url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/image.json"
     },
-    videos: {
-        title: "Vídeos",
-        url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/videos.json"
-    },
+    // videos: {
+    //     title: "Vídeos",
+    //     url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/videos.json"
+    // },
     gifs: {
         title: "Gifs",
         url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/ptbr/website/commands/gifs.json"
