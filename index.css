@@ -12,13 +12,14 @@ body {
     /* overflow-x: hidden; */
     position: relative;
     display: block;
+    background-color: white;
 
     font-family: 'Montserrat', sans-serif;
 }
 
 :root{
     --main-purple: #5d5ca5;
-    --main-white: #F2F2F2;
+    --main-white: #e6e6e6;
 }
 
 .hidden{
@@ -45,6 +46,7 @@ a:hover {
     height: 100%;
     position: absolute;
     background-color: var(--main-white) ;
+    /* background-color: #4158D0; */
     top: 0;
     left: 0;
 }
