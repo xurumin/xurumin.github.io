@@ -1,331 +1,451 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Help - Xurumin</title>
-    <meta name="title" content="help - Xurumin">
-    <meta name="description" content="A Brazilian bot that plays music (with playlists!) while you play with your friends and lets you listen to that podcast in the late afternoon. Also I have memes and games!">
-    <meta name="keywords"
-        content="discord, bot, xurumin, fun, entertainment, games, music, podcast, playlist, spotify, youtube, games">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    <meta name="title" content="help - Xurumin" />
+    <meta
+      name="description"
+      content="A Brazilian bot that plays music (with playlists!) while you play with your friends and lets you listen to that podcast in the late afternoon. Also I have memes and games!"
+    />
+    <meta
+      name="keywords"
+      content="discord, bot, xurumin, fun, entertainment, games, music, podcast, playlist, spotify, youtube, games"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
 
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#514F8C">
+    <meta name="theme-color" content="#514F8C" />
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#514F8C">
+    <meta name="msapplication-navbutton-color" content="#514F8C" />
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#514F8C">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#514F8C" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-    <link rel="shortcut icon" href="./images/xurumin_site_icon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/xurumin_site_icon.png"
+      type="image/x-icon"
+    />
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80FWKW3D6J"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-80FWKW3D6J"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-80FWKW3D6J');
+      gtag("config", "G-80FWKW3D6J");
     </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '3666488206721527');
-        fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "3666488206721527");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" alt="" style="display:none"
-            src="https://www.facebook.com/tr?id=3666488206721527&ev=PageView&noscript=1" /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt=""
+        style="display:none"
+        src="https://www.facebook.com/tr?id=3666488206721527&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- <script src="https://kit.fontawesome.com/6fc5325808.js" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.min.js"></script> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="container-fluid" id="top_bar_2">
-        <div class="row justify-content-center" id="nv_bar">
-            <div class="col-10">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="/">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/logo.webp">
-                            <img id="l_st" src="./images/logo.png" width="140px"
-                                alt="Xurumin Logo">
-                        </picture>
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/logo_white.webp">
-                            <img id="l_white" src="./images/logo_white.png" width="140px"
-                                alt="Xurumin Logo">
-                        </picture>
-                    </a>
-                    <i id="menu_nav" class="fas fa-bars" data-toggle="modal" data-target="#menu_modal"></i>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-                        <ul class="navbar-nav ml-auto p-2">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="./commands">
-                                    commands
-                                </a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="./help">
-                                    help (FAQ)
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="cta_nav" target="_blank"
-                                    href="./addxurumin">
-                                    <i class="fas fa-plus" style="margin-right: 5px;"></i>Add me!
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+      <div class="row justify-content-center" id="nv_bar">
+        <div class="col-10">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/logo.webp" />
+                <img
+                  id="l_st"
+                  src="./images/logo.png"
+                  width="140px"
+                  alt="Xurumin Logo"
+                />
+              </picture>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="/images/webp/logo_white.webp"
+                />
+                <img
+                  id="l_white"
+                  src="./images/logo_white.png"
+                  width="140px"
+                  alt="Xurumin Logo"
+                />
+              </picture>
+            </a>
+            <i
+              id="menu_nav"
+              class="fas fa-bars"
+              data-toggle="modal"
+              data-target="#menu_modal"
+            ></i>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <ul class="navbar-nav ml-auto p-2">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./commands"> commands </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="./help"> help (FAQ) </a>
+                </li>
+                <li class="nav-item">
+                  <a id="cta_nav" target="_blank" href="./addxurumin">
+                    <i class="fas fa-plus" style="margin-right: 5px;"></i>Add
+                    me!
+                  </a>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
-    <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="navbar-nav ml-auto p-2">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./commands">
-                                commands
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./help">
-                                help (FAQ)
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" target="_blank" href="https://top.gg/bot/753723888671785042/vote">
-                                Vote and help Xurumin!
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="cta_nav" target="_blank"
-                                href="./addxurumin">
-                                <i class="fas fa-plus" style="margin-right: 5px;"></i>Add me!
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="menu_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="navbar-nav ml-auto p-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="./commands"> commands </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./help"> help (FAQ) </a>
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  target="_blank"
+                  href="https://top.gg/bot/753723888671785042/vote"
+                >
+                  Vote and help Xurumin!
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="cta_nav" target="_blank" href="./addxurumin">
+                  <i class="fas fa-plus" style="margin-right: 5px;"></i>Add me!
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <script>
-        var help_list = {
-            help: {
-                title: "Help",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/help.md"
-            },
-            howtogetcoins: {
-                title: "How to earn Xurumin Coins?",
-                url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/howtogetcoins.md"
-            }
-        }
+      var help_list = {
+        help: {
+          title: "Help",
+          url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/help.md",
+        },
+        howtogetcoins: {
+          title: "How to earn Xurumin Coins?",
+          url: "https://raw.githubusercontent.com/xurumin/aboutme/main/help/en/website/help/howtogetcoins.md",
+        },
+      };
 
-        function httpGetAsync(theUrl) {
-            return new Promise((resolve, reject) => {
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.onreadystatechange = function () {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                        resolve(xmlHttp.responseText)
-                }
-                xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-                xmlHttp.send(null);
-            })
-        }
-        var md = window.markdownit({
-            html: true
+      function httpGetAsync(theUrl) {
+        return new Promise((resolve, reject) => {
+          var xmlHttp = new XMLHttpRequest();
+          xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+              resolve(xmlHttp.responseText);
+          };
+          xmlHttp.open("GET", theUrl, true); // true for asynchronous
+          xmlHttp.send(null);
         });
-        var lastSelected = ""
+      }
+      var md = window.markdownit({
+        html: true,
+      });
+      var lastSelected = "";
 
-        async function showCategory(tag) {
-            document.getElementById("cnt_help").innerHTML = "Carregando help..."
+      async function showCategory(tag) {
+        document.getElementById("cnt_help").innerHTML = "Carregando help...";
 
-            const help = help_list[tag]
+        const help = help_list[tag];
 
-            document.getElementById("btn_cat").innerHTML = `${help.title} <i class="fas fa-chevron-down"></i>`
+        document.getElementById(
+          "btn_cat"
+        ).innerHTML = `${help.title} <i class="fas fa-chevron-down"></i>`;
 
-            var response = await httpGetAsync(help.url)
-            var html = md.render(response);
+        var response = await httpGetAsync(help.url);
+        var html = md.render(response);
 
-            var m = html.split("<hr>")
-            document.getElementById("cnt_help").innerHTML = html
+        var m = html.split("<hr>");
+        document.getElementById("cnt_help").innerHTML = html;
+      }
+
+      async function changeCategory(tag) {
+        if (
+          document.getElementById(`cmd_${tag}`).getAttribute("selected") !=
+            null ||
+          document.getElementById(`m_cmd_${tag}`).getAttribute("selected") !=
+            null
+        )
+          return;
+
+        document
+          .getElementById(`cmd_${lastSelected}`)
+          .removeAttribute("selected");
+        document.getElementById(`cmd_${tag}`).setAttribute("selected", "");
+
+        $("#category_modal").modal("hide");
+
+        document
+          .getElementById(`m_cmd_${lastSelected}`)
+          .removeAttribute("selected");
+        document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "");
+
+        lastSelected = tag;
+        document.getElementById("cnt_help").innerHTML = "Loading commands...";
+        showCategory(tag);
+      }
+
+      window.onload = async () => {
+        //run()
+        start();
+      };
+      function start() {
+        var i = 0;
+        for (var index in help_list) {
+          const category = help_list[index];
+          if (i == 0) {
+            lastSelected = index;
+            //computer
+            document.getElementById(
+              "cmd_cat"
+            ).innerHTML += `<li id="cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`;
+
+            //mobile
+            document.getElementById(
+              "modal_cnt"
+            ).innerHTML += `<li id="m_cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`;
+          } else {
+            //computer
+            document.getElementById(
+              "cmd_cat"
+            ).innerHTML += `<li id="cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`;
+
+            //mobile
+            document.getElementById(
+              "modal_cnt"
+            ).innerHTML += `<li id="m_cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`;
+          }
+          i += 1;
         }
-
-        async function changeCategory(tag) {
-            if ((document.getElementById(`cmd_${tag}`).getAttribute("selected") != null) || (document.getElementById(`m_cmd_${tag}`).getAttribute("selected") != null)) return;
-
-            document.getElementById(`cmd_${lastSelected}`).removeAttribute("selected")
-            document.getElementById(`cmd_${tag}`).setAttribute("selected", "")
-
-
-            $('#category_modal').modal('hide')
-
-            document.getElementById(`m_cmd_${lastSelected}`).removeAttribute("selected")
-            document.getElementById(`m_cmd_${tag}`).setAttribute("selected", "")
-
-            lastSelected = tag
-            document.getElementById("cnt_help").innerHTML = "Loading commands..."
-            showCategory(tag)
-        }
-
-        window.onload = async () => {
-            //run()
-            start();
-        }
-        function start(){
-            var i = 0
-            for (var index in help_list) {
-                const category = help_list[index]
-                if (i == 0) {
-                    lastSelected = index
-                    //computer
-                    document.getElementById("cmd_cat").innerHTML += (
-                        `<li id="cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
-                        )
-
-                    //mobile
-                    document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')" selected>${category.title}</li>`
-                        )
-                } else {
-                    //computer
-                    document.getElementById("cmd_cat").innerHTML += (
-                        `<li id="cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`)
-
-                    //mobile
-                    document.getElementById("modal_cnt").innerHTML += (
-                        `<li id="m_cmd_${index}" onclick="changeCategory('${index}')">${category.title}</li>`
-                        )
-                }
-                i += 1;
-            }
-        }
+      }
     </script>
     <div class="container-fluid" id="content">
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-2" id="left">
-                <h3>Categories</h3>
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-2" id="left">
+          <h3>Categories</h3>
 
-                <button type="button" id="btn_cat" data-toggle="modal" data-target="#category_modal">
-                    Categories <i class="fas fa-arrow-down"></i>
-                </button>
+          <button
+            type="button"
+            id="btn_cat"
+            data-toggle="modal"
+            data-target="#category_modal"
+          >
+            Categories <i class="fas fa-arrow-down"></i>
+          </button>
 
-                <ul id="cmd_cat">
-                </ul>
-            </div>
-            <div class="col-12 col-md-8" id="right">
-                <div id="cnt_help">
-
-                </div>
-            </div>
+          <ul id="cmd_cat"></ul>
         </div>
+        <div class="col-12 col-md-8" id="right">
+          <div id="cnt_help"></div>
+        </div>
+      </div>
     </div>
     <script>
-        showCategory("help");
+      showCategory("help");
     </script>
-    <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="category_modal_title">Categories</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul id="modal_cnt">
-
-                    </ul>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="category_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="category_modal_title">Categories</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul id="modal_cnt"></ul>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container-fluid" id="add_cta">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6" id="text">
-                <h1>Why should I use Xurumin?</h1>
-                <p>Because with Xurumin you can make your guild much cooler by adding several entertainment and music commands to it (who doesn't enjoy watching memes while listening to Rick Astley?)<br><br>Also, you would have a cute and fun kitten on your server with a super cool name. (no I'm not talking about Garfield)</p>
-                <a href="./addxurumin"
-                    target="_blank" class="cta animate__animated animate__fadeInUp btn" id="cta_top"><i
-                        class="fas fa-plus" style="margin-right: 5px;"></i>Add me!</a>
-                <a href="./commands" class="cta animate__animated animate__fadeInUp btn" id="cta_top_sec"><i
-                        class="fas fa-terminal" style="margin-right: 5px;"></i>See commands</a>
-            </div>
-            <div class="col-12 col-md-6" id="cat">
-                <img src="./images/Playful cat-cuate (1).svg" alt="Cat playing">
-            </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6" id="text">
+          <h1>Why should I use Xurumin?</h1>
+          <p>
+            Because with Xurumin you can make your guild much cooler by adding
+            several entertainment and music commands to it (who doesn't enjoy
+            watching memes while listening to Rick Astley?)<br /><br />Also, you
+            would have a cute and fun kitten on your server with a super cool
+            name. (no I'm not talking about Garfield)
+          </p>
+          <a
+            href="./addxurumin"
+            target="_blank"
+            class="cta animate__animated animate__fadeInUp btn"
+            id="cta_top"
+            ><i class="fas fa-plus" style="margin-right: 5px;"></i>Add me!</a
+          >
+          <a
+            href="./commands"
+            class="cta animate__animated animate__fadeInUp btn"
+            id="cta_top_sec"
+            ><i class="fas fa-terminal" style="margin-right: 5px;"></i>See
+            commands</a
+          >
         </div>
+        <div class="col-12 col-md-6" id="cat">
+          <img src="./images/Playful cat-cuate (1).svg" alt="Cat playing" />
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid" id="footer">
-        <div class="row flex-row-reverse">
-            <div class="col-12 col-md-4">
-                <div id="right">
-                    <h1>Useful links</h1>
-                    <ul>
-                        <li><a target="_blank" href="https://discord.com/invite/bvb8YKSCQR">Need help?</a></li>
-                        <li><a href="./commands">Command list</a></li>
-                        <li><a target="_blank" href="https://github.com/xurumin/">Xurumin's Github</a></li>
-                        <li><a target="_blank" href="https://top.gg/bot/753723888671785042/vote">Want to help Xurumin? Vote now!</a></li>
-                        <li><a href="/termos">Terms of use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-8" id="copy">
-                Copyright © 2021 - Xurumin | By <a href="https://jnaraujo.github.io/" target="_blank">jnaraujo</a><br>
-                <span style="font-size: 10px;">Illustration by Erik Machado and Freepik Storyset</span>
-                <br>
-                <a style="font-size: 25px; margin-right: 15px;" target="_blank"
-                    href="https://www.instagram.com/xuruminbot/"><i class="fab fa-instagram"></i></a>
-                <a style="font-size: 25px;" target="_blank" href="https://twitter.com/xuruminbot"><i
-                        class="fab fa-twitter"></i></a>
-            </div>
+      <div class="row flex-row-reverse">
+        <div class="col-12 col-md-4">
+          <div id="right">
+            <h1>Useful links</h1>
+            <ul>
+              <li>
+                <a target="_blank" href="https://discord.com/invite/bvb8YKSCQR"
+                  >Need help?</a
+                >
+              </li>
+              <li><a href="./commands">Command list</a></li>
+              <li>
+                <a target="_blank" href="https://github.com/xurumin/"
+                  >Xurumin's Github</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://top.gg/bot/753723888671785042/vote"
+                  >Want to help Xurumin? Vote now!</a
+                >
+              </li>
+              <li><a href="/termos">Terms of use</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="col-12 col-md-8" id="copy">
+          Copyright © 2021 - Xurumin | By
+          <a href="https://jnaraujo.com/" target="_blank">jnaraujo</a><br />
+          <span style="font-size: 10px;"
+            >Illustration by Erik Machado and Freepik Storyset</span
+          >
+          <br />
+          <a
+            style="font-size: 25px; margin-right: 15px;"
+            target="_blank"
+            href="https://www.instagram.com/xuruminbot/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            style="font-size: 25px;"
+            target="_blank"
+            href="https://twitter.com/xuruminbot"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
     </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js'></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+  </body>
 </html>

@@ -1,154 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xurumin - O bot mais fofo e divertido do Discord</title>
-    <meta name="title" content="Xurumin - O bot mais fofo e divertido do Discord">
-    <meta name="description" content="Um bot brasileiro que toca música (com playlists!) enquanto você joga com seus amigos e
-    te deixa ouvir aquele podcast no fim de tarde. Além disso, também tenho memes e jogos!">
-    <meta name="keywords"
-        content="discord, bot, xurumin, diversão, entretenimento, jogos, musica, podcast, playlist, spotify, youtube, games">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Portuguese">
+    <meta
+      name="title"
+      content="Xurumin - O bot mais fofo e divertido do Discord"
+    />
+    <meta
+      name="description"
+      content="Um bot brasileiro que toca música (com playlists!) enquanto você joga com seus amigos e
+    te deixa ouvir aquele podcast no fim de tarde. Além disso, também tenho memes e jogos!"
+    />
+    <meta
+      name="keywords"
+      content="discord, bot, xurumin, diversão, entretenimento, jogos, musica, podcast, playlist, spotify, youtube, games"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Portuguese" />
 
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#514F8C">
+    <meta name="theme-color" content="#514F8C" />
     <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#514F8C">
+    <meta name="msapplication-navbutton-color" content="#514F8C" />
     <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#514F8C">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#514F8C" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
+    <link
+      rel="shortcut icon"
+      href="./images/xurumin_site_icon.png"
+      type="image/x-icon"
+    />
 
-    <link rel="shortcut icon" href="./images/xurumin_site_icon.png" type="image/x-icon">
-
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80FWKW3D6J"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-80FWKW3D6J"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-80FWKW3D6J');
+      gtag("config", "G-80FWKW3D6J");
     </script>
 
     <!-- <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WCNH8N5"></script> -->
 
     <!-- Facebook Pixel Code -->
     <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '3666488206721527');
-        fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "3666488206721527");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" alt="" style="display:none"
-            src="https://www.facebook.com/tr?id=3666488206721527&ev=PageView&noscript=1" /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        alt=""
+        style="display:none"
+        src="https://www.facebook.com/tr?id=3666488206721527&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- <script src="https://kit.fontawesome.com/6fc5325808.js" crossorigin="anonymous"></script> -->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
     <script src="/js/scroll_animation.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid" id="top_bar">
-        <div class="row justify-content-center" id="nv_bar">
-            <div class="col-10">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/logo.webp">
-                            <img id="l_st" src="./images/logo.png" width="140px" alt="Xurumin Logo">
-                        </picture>
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/logo_white.webp">
-                            <img id="l_white" src="./images/logo_white.png" width="100px" alt="Xurumin Logo">
-                        </picture>
-
-                    </a>
-                    <i id="menu_nav" class="fas fa-bars" data-toggle="modal" data-target="#menu_modal"></i>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-                        <ul class="navbar-nav ml-auto p-2">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/comandos">
-                                    Comandos
-                                </a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/ajuda">
-                                    Ajuda (FAQ)
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="cta_nav" target="_blank" href="/addxurumin">
-                                    <i class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+      <div class="row justify-content-center" id="nv_bar">
+        <div class="col-10">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/logo.webp" />
+                <img
+                  id="l_st"
+                  src="./images/logo.png"
+                  width="140px"
+                  alt="Xurumin Logo"
+                />
+              </picture>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="/images/webp/logo_white.webp"
+                />
+                <img
+                  id="l_white"
+                  src="./images/logo_white.png"
+                  width="100px"
+                  alt="Xurumin Logo"
+                />
+              </picture>
+            </a>
+            <i
+              id="menu_nav"
+              class="fas fa-bars"
+              data-toggle="modal"
+              data-target="#menu_modal"
+            ></i>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <ul class="navbar-nav ml-auto p-2">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/comandos"> Comandos </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/ajuda"> Ajuda (FAQ) </a>
+                </li>
+                <li class="nav-item">
+                  <a id="cta_nav" target="_blank" href="/addxurumin">
+                    <i class="fas fa-plus" style="margin-right: 5px;"></i>Me
+                    adicione!
+                  </a>
+                </li>
+              </ul>
             </div>
+          </nav>
         </div>
-        <div class="row justify-content-center align-items-center" id="cct">
-            <div class="col-12 col-md-10" id="main">
-                <div class="row">
-                    <div class="col-12 col-md-5" id="left-side">
-                        <div id="inner">
-                            <h1 id="title">
-                                Música e diversão sem pagar <span id="title_grad">nada</span> por isso<br>
-                            </h1>
-                            <p id="subtitle_mobile">
-                                Um bot brasileiro feito para deixar seu servidor ainda mais incrível e divertido!
-                            </p>
-                            <p id="subtitle">
-                                Toque músicas (com playlists!) ou podcasts e se divirta com seus amigos:
-                                <br>Sem limitações e em alta qualidade.
-                            </p>
-                            <a href="/addxurumin" target="_blank" class="cta animate__animated animate__fadeInUp btn"
-                                id="cta_top"><i class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!</a>
-                            <a href="/comandos" class="cta animate__animated animate__fadeInUp btn" id="cta_top_sec"><i
-                                    class="fas fa-terminal" style="margin-right: 5px;"></i>Ver
-                                comandos</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-7" id="right-side">
-                        <img width="300px" height="300px" id="sp_img" class="inner" src="./images/xurumin_cat.svg"
-                            alt="Xurumin">
-                    </div>
-                    <div class="col-md-12" id="top_arrow_down">
-                        <i class="fas fa-arrow-down animate__animated animate__fadeInUp"></i>
-                    </div>
-                </div>
+      </div>
+      <div class="row justify-content-center align-items-center" id="cct">
+        <div class="col-12 col-md-10" id="main">
+          <div class="row">
+            <div class="col-12 col-md-5" id="left-side">
+              <div id="inner">
+                <h1 id="title">
+                  Música e diversão sem pagar
+                  <span id="title_grad">nada</span> por isso<br />
+                </h1>
+                <p id="subtitle_mobile">
+                  Um bot brasileiro feito para deixar seu servidor ainda mais
+                  incrível e divertido!
+                </p>
+                <p id="subtitle">
+                  Toque músicas (com playlists!) ou podcasts e se divirta com
+                  seus amigos:
+                  <br />Sem limitações e em alta qualidade.
+                </p>
+                <a
+                  href="/addxurumin"
+                  target="_blank"
+                  class="cta animate__animated animate__fadeInUp btn"
+                  id="cta_top"
+                  ><i class="fas fa-plus" style="margin-right: 5px;"></i>Me
+                  adicione!</a
+                >
+                <a
+                  href="/comandos"
+                  class="cta animate__animated animate__fadeInUp btn"
+                  id="cta_top_sec"
+                  ><i class="fas fa-terminal" style="margin-right: 5px;"></i>Ver
+                  comandos</a
+                >
+              </div>
             </div>
+            <div class="col-12 col-md-7" id="right-side">
+              <img
+                width="300px"
+                height="300px"
+                id="sp_img"
+                class="inner"
+                src="./images/xurumin_cat.svg"
+                alt="Xurumin"
+              />
+            </div>
+            <div class="col-md-12" id="top_arrow_down">
+              <i
+                class="fas fa-arrow-down animate__animated animate__fadeInUp"
+              ></i>
+            </div>
+          </div>
         </div>
-        <div id="background" class="animate__animated  animate__zoomIn"></div>
+      </div>
+      <div id="background" class="animate__animated animate__zoomIn"></div>
     </div>
     <!-- <div class="container-fluid" id="img_dw">
         <div class="row justify-content-center align-items-center">
@@ -156,314 +229,445 @@
             </div>
         </div>
     </div> -->
-    <div class="modal fade" id="menu_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="navbar-nav ml-auto p-2">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/comandos">
-                                Comandos
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/ajuda">
-                                Ajuda (FAQ)
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" target="_blank" href="https://top.gg/bot/753723888671785042/vote">
-                                Vote e ajude o Xurumin!
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="cta_nav" target="_blank" href="/addxurumin">
-                                <i class="fas fa-plus" style="margin-right: 5px;"></i>Me adicione!
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="menu_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="navbar-nav ml-auto p-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="/comandos"> Comandos </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/ajuda"> Ajuda (FAQ) </a>
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  target="_blank"
+                  href="https://top.gg/bot/753723888671785042/vote"
+                >
+                  Vote e ajude o Xurumin!
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="cta_nav" target="_blank" href="/addxurumin">
+                  <i class="fas fa-plus" style="margin-right: 5px;"></i>Me
+                  adicione!
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <div class="wave-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70">
-            <path fill="#F2F2F2" fill-opacity="1"
-                d="M0 70 80 48.7C160 27 290 3 478 0C642 1 800 27 960 43.3C1120 59 1280 49 1360 43.3L1440 38 1440 70 1360 70C1280 70 1120 70 960 70C800 70 640 70 480 70C320 70 160 70 80 70L0 70Z">
-            </path>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70">
+        <path
+          fill="#F2F2F2"
+          fill-opacity="1"
+          d="M0 70 80 48.7C160 27 290 3 478 0C642 1 800 27 960 43.3C1120 59 1280 49 1360 43.3L1440 38 1440 70 1360 70C1280 70 1120 70 960 70C800 70 640 70 480 70C320 70 160 70 80 70L0 70Z"
+        ></path>
+      </svg>
     </div>
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center" id="boxes">
-            <div class="col-12 col-md-8 col-xl-8 items">
-                <div class="row align-items-center" anmt="animate__fadeInUp">
-                    <div class="col-12 col-md-4 imsr cardd">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/party.webp">
-                            <img class="image" style="transform: scaleX(-1);" width="100%" height="100%"
-                                src="./images/party.png" alt="Desenho de pessoas se divertindo">
-                        </picture>
-                    </div>
-                    <div class="col-12 col-md-8 text">
-                        <h1>Solta o som DJ!</h1>
-                        <p>Deixe que a galera ouça aquele sonzinho maneiro
-                            enquanto joga com os amigos!
-                            <br>
-                            Vale para playlists do Spotify e do Youtube também!</p>
-                        <a href="/comandos#music" class="btn">Ver comandos de Música</a>
-                    </div>
-                </div>
-                <div class="row align-items-center flex-row-reverse" anmt="animate__fadeInUp">
-                    <div class="col-12 col-md-4 imsr cardd">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/podcast.webp">
-                            <img class="image" src="./images/podcast.png" width="100%" height="100%"
-                                alt="Desenho de duas pessoas ouvindo podcast">
-                        </picture>
-                    </div>
-                    <div class="col-12 col-md-8 text">
-                        <h1>Lambda, lambda,<br>lambda, nerds!</h1>
-                        <p>Por que não deixar o povão ouvir um podcast juntinho
-                            no fim da tarde? (ou nas altas madrugas )
-                            <br>
-                            São milhares de podcasts para ouvir com seus amigos!
-                        </p>
-
-                        <a href="/blog/podcast" class="btn">Saiba mais sobre podcasts</a>
-                    </div>
-                </div>
-                <div class="row align-items-center" anmt="animate__fadeInUp">
-                    <div class="col-12 col-md-4 imsr cardd">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/catcom.webp">
-                            <img class="image" src="./images/catcom.png" width="100%" height="100%"
-                                alt="Desenho de um gato brincando com um novelo de lã">
-                        </picture>
-                    </div>
-                    <div class="col-12 col-md-8 text">
-                        <h1>Deixa os garoto brincar!</h1>
-                        <p>Deixe a garotada se divertir com comandos interativos
-                            e cheios de imagens!<br><i>(modéstia a parte, mas sou conhecido como o melhor editor de
-                                memes da minha rua)</i>
-                            <br>
-                            São diversos comandos de imagem pra você brincar :)
-                        </p>
-                        <a href="/comandos#image" class="btn">Ver comandos de Imagem</a>
-                    </div>
-                </div>
-                <div class="row align-items-center flex-row-reverse" anmt="animate__fadeInUp">
-                    <div class="col-12 col-md-4 imsr cardd">
-                        <picture>
-                            <source type="image/webp" srcset="/images/webp/havingfun.webp">
-                            <img class="image" src="./images/havingfun.png" width="100%" height="100%"
-                                alt="Desenho de pessoas jogando na tv">
-                        </picture>
-                    </div>
-                    <div class="col-12 col-md-8 text">
-                        <h1>Noite dos joguinhos?</h1>
-                        <p>Jogue e <i style="text-decoration: line-through;">mostre quem é o melhor</i> se divirta com
-                            seus amigos com
-                            jogos supimpas e legais!
-                            <br>
-                            Além disso, se você jogar muito bem (ou der sorte) podem ganhar Xurumin Coins!
-                        </p>
-                        <a href="/comandos#games" class="btn">Ver comandos de Jogos</a>
-                    </div>
-                </div>
+      <div class="row justify-content-center align-items-center" id="boxes">
+        <div class="col-12 col-md-8 col-xl-8 items">
+          <div class="row align-items-center" anmt="animate__fadeInUp">
+            <div class="col-12 col-md-4 imsr cardd">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/party.webp" />
+                <img
+                  class="image"
+                  style="transform: scaleX(-1);"
+                  width="100%"
+                  height="100%"
+                  src="./images/party.png"
+                  alt="Desenho de pessoas se divertindo"
+                />
+              </picture>
             </div>
+            <div class="col-12 col-md-8 text">
+              <h1>Solta o som DJ!</h1>
+              <p>
+                Deixe que a galera ouça aquele sonzinho maneiro enquanto joga
+                com os amigos!
+                <br />
+                Vale para playlists do Spotify e do Youtube também!
+              </p>
+              <a href="/comandos#music" class="btn">Ver comandos de Música</a>
+            </div>
+          </div>
+          <div
+            class="row align-items-center flex-row-reverse"
+            anmt="animate__fadeInUp"
+          >
+            <div class="col-12 col-md-4 imsr cardd">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/podcast.webp" />
+                <img
+                  class="image"
+                  src="./images/podcast.png"
+                  width="100%"
+                  height="100%"
+                  alt="Desenho de duas pessoas ouvindo podcast"
+                />
+              </picture>
+            </div>
+            <div class="col-12 col-md-8 text">
+              <h1>Lambda, lambda,<br />lambda, nerds!</h1>
+              <p>
+                Por que não deixar o povão ouvir um podcast juntinho no fim da
+                tarde? (ou nas altas madrugas )
+                <br />
+                São milhares de podcasts para ouvir com seus amigos!
+              </p>
+
+              <a href="/blog/podcast" class="btn">Saiba mais sobre podcasts</a>
+            </div>
+          </div>
+          <div class="row align-items-center" anmt="animate__fadeInUp">
+            <div class="col-12 col-md-4 imsr cardd">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/catcom.webp" />
+                <img
+                  class="image"
+                  src="./images/catcom.png"
+                  width="100%"
+                  height="100%"
+                  alt="Desenho de um gato brincando com um novelo de lã"
+                />
+              </picture>
+            </div>
+            <div class="col-12 col-md-8 text">
+              <h1>Deixa os garoto brincar!</h1>
+              <p>
+                Deixe a garotada se divertir com comandos interativos e cheios
+                de imagens!<br /><i
+                  >(modéstia a parte, mas sou conhecido como o melhor editor de
+                  memes da minha rua)</i
+                >
+                <br />
+                São diversos comandos de imagem pra você brincar :)
+              </p>
+              <a href="/comandos#image" class="btn">Ver comandos de Imagem</a>
+            </div>
+          </div>
+          <div
+            class="row align-items-center flex-row-reverse"
+            anmt="animate__fadeInUp"
+          >
+            <div class="col-12 col-md-4 imsr cardd">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="/images/webp/havingfun.webp"
+                />
+                <img
+                  class="image"
+                  src="./images/havingfun.png"
+                  width="100%"
+                  height="100%"
+                  alt="Desenho de pessoas jogando na tv"
+                />
+              </picture>
+            </div>
+            <div class="col-12 col-md-8 text">
+              <h1>Noite dos joguinhos?</h1>
+              <p>
+                Jogue e
+                <i style="text-decoration: line-through;"
+                  >mostre quem é o melhor</i
+                >
+                se divirta com seus amigos com jogos supimpas e legais!
+                <br />
+                Além disso, se você jogar muito bem (ou der sorte) podem ganhar
+                Xurumin Coins!
+              </p>
+              <a href="/comandos#games" class="btn">Ver comandos de Jogos</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 89">
-            <path fill="#5d5ca5" fill-opacity="1"
-                d="M0 90 80 68.7C160 47 320 5 480 4.7C640 5 800 47 960 63.3C1120 79 1280 69 1360 63.3L1440 58 1440 90 1360 90C1280 90 1120 90 960 90C800 90 640 90 480 90C320 90 160 90 80 90L0 90Z">
-            </path>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 89">
+        <path
+          fill="#5d5ca5"
+          fill-opacity="1"
+          d="M0 90 80 68.7C160 47 320 5 480 4.7C640 5 800 47 960 63.3C1120 79 1280 69 1360 63.3L1440 58 1440 90 1360 90C1280 90 1120 90 960 90C800 90 640 90 480 90C320 90 160 90 80 90L0 90Z"
+        ></path>
+      </svg>
     </div>
     <div class="container-fluid testimonials">
-        <div class="row">
-            <div class="col-12">
-                <h1 id="title" anmt="animate__zoomIn">O que as pessoas falam sobre o Xurumin</h1>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <h1 id="title" anmt="animate__zoomIn">
+            O que as pessoas falam sobre o Xurumin
+          </h1>
         </div>
-        <div class="card-columns">
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">Cara o Xurumin é muito bom se loko, acho que é um dos poucos bots que oferece a
-                        possibilidade de ouvir podcast de uma forma bem otimizada. top demais</p>
-                    <h6 class="card-subtitle mb-2 text-muted">ErikMachado#8476</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">BEST BOT EVER SAVED MY LIFE I CAN LISTEN TO MY PODCASTS NOW!! THANK YOUUUU</p>
-                    <h6 class="card-subtitle mb-2 text-muted">User from TOP.GG</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">Mano, não sou muito de utilizar o Discord, mas quando eu tô em call com os
-                        amigos, sempre uso o Xurumin pra ouvir músicas, e também tem outras possibilidades bem
-                        bacanas.<br>Recomendo muito 🤙</p>
-                    <h6 class="card-subtitle mb-2 text-muted">4Shareware#6066</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">O Xurumin é um GRANDE amigo. Sério! Se eu pudesse escolher um gato pra ter o
-                        título de Gato Mais Legal do Mundo, esse gato seria o Xurumin!
-                        <br>
-                        É isso, galera! Xurumin é top.</p>
-                    <h6 class="card-subtitle mb-2 text-muted">Garfield</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star2.svg">
-                    </h5>
-                    <p class="card-text">Ele me deve 15 reais. Caloteiro demais.</p>
-                    <h6 class="card-subtitle mb-2 text-muted">Gato da Dona Lurdes</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">Bot muito bom slc. Melhor bot que eu já usei. Slc top demais, fi. Sem
-                        condições, fi. Gato de chapeu slc top demais. Obrigado, Xurumin 😚👉👈</p>
-                    <h6 class="card-subtitle mb-2 text-muted">TPM Gordo#3273</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">Bot fino do fino. Da pra ouvir músicas e podcasts com ele. Além disso, o
-                        Xurumin curou minha alergia a gatos.</p>
-                    <h6 class="card-subtitle mb-2 text-muted">kvn#2897</h6>
-                </div>
-            </div>
-            <div class="card hidden" anmt="animate__fadeInUp">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                        <img width="30px" src="/images/star.svg">
-                    </h5>
-                    <p class="card-text">Muito bom! Super recomendo! Dá pra ouvir podcasts e música! Incrível!</p>
-                    <h6 class="card-subtitle mb-2 text-muted">Screw#5129</h6>
-                </div>
-            </div>
+      </div>
+      <div class="card-columns">
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              Cara o Xurumin é muito bom se loko, acho que é um dos poucos bots
+              que oferece a possibilidade de ouvir podcast de uma forma bem
+              otimizada. top demais
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">ErikMachado#8476</h6>
+          </div>
         </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              BEST BOT EVER SAVED MY LIFE I CAN LISTEN TO MY PODCASTS NOW!!
+              THANK YOUUUU
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">User from TOP.GG</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              Mano, não sou muito de utilizar o Discord, mas quando eu tô em
+              call com os amigos, sempre uso o Xurumin pra ouvir músicas, e
+              também tem outras possibilidades bem bacanas.<br />Recomendo muito
+              🤙
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">4Shareware#6066</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              O Xurumin é um GRANDE amigo. Sério! Se eu pudesse escolher um gato
+              pra ter o título de Gato Mais Legal do Mundo, esse gato seria o
+              Xurumin!
+              <br />
+              É isso, galera! Xurumin é top.
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">Garfield</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star2.svg" />
+            </h5>
+            <p class="card-text">Ele me deve 15 reais. Caloteiro demais.</p>
+            <h6 class="card-subtitle mb-2 text-muted">Gato da Dona Lurdes</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              Bot muito bom slc. Melhor bot que eu já usei. Slc top demais, fi.
+              Sem condições, fi. Gato de chapeu slc top demais. Obrigado,
+              Xurumin 😚👉👈
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">TPM Gordo#3273</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              Bot fino do fino. Da pra ouvir músicas e podcasts com ele. Além
+              disso, o Xurumin curou minha alergia a gatos.
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">kvn#2897</h6>
+          </div>
+        </div>
+        <div class="card hidden" anmt="animate__fadeInUp">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+              <img width="30px" src="/images/star.svg" />
+            </h5>
+            <p class="card-text">
+              Muito bom! Super recomendo! Dá pra ouvir podcasts e música!
+              Incrível!
+            </p>
+            <h6 class="card-subtitle mb-2 text-muted">Screw#5129</h6>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid" id="add_cta">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6" id="text">
-                <h1 anmt="animate__fadeInUp">Por que eu deveria usar o Xurumin?</h1>
-                <p anmt="animate__fadeInUp">Porque com o Xurumin você pode deixar o seu servidor muito mais legal, adicionando a ele diversos
-                    comandos de entretenimento e de músicas (quem não curte ver uns memes enquanto ouve Seu
-                    Jorge?)<br><br>Além disso, você teria no seu servidor um gatinho fofinho e divertido com um nome
-                    super maneiro. (não, eu não estou falando do Garfield)</p>
-                <a href="/addxurumin" target="_blank" class="cta btn" anmt="animate__fadeIn" id="cta_top"><i class="fas fa-plus"
-                        style="margin-right: 5px;"></i>Me adicione!</a>
-                <a href="/comandos" class="cta btn" id="cta_top_sec" anmt="animate__fadeIn"><i class="fas fa-terminal"
-                        style="margin-right: 5px;"></i>Ver comandos</a>
-            </div>
-            <div class="col-12 col-md-6" anmt="animate__fadeIn" id="cat">
-                <picture>
-                    <source type="image/webp" srcset="/images/webp/xurumin_and_garfield.webp">
-                    <img src="./images/xurumin_and_garfield.png" width="100%" height="100%" class=""
-                        alt="`Xurumin e outro gato brincando">
-                </picture>
-            </div>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6" id="text">
+          <h1 anmt="animate__fadeInUp">Por que eu deveria usar o Xurumin?</h1>
+          <p anmt="animate__fadeInUp">
+            Porque com o Xurumin você pode deixar o seu servidor muito mais
+            legal, adicionando a ele diversos comandos de entretenimento e de
+            músicas (quem não curte ver uns memes enquanto ouve Seu Jorge?)<br /><br />Além
+            disso, você teria no seu servidor um gatinho fofinho e divertido com
+            um nome super maneiro. (não, eu não estou falando do Garfield)
+          </p>
+          <a
+            href="/addxurumin"
+            target="_blank"
+            class="cta btn"
+            anmt="animate__fadeIn"
+            id="cta_top"
+            ><i class="fas fa-plus" style="margin-right: 5px;"></i>Me
+            adicione!</a
+          >
+          <a
+            href="/comandos"
+            class="cta btn"
+            id="cta_top_sec"
+            anmt="animate__fadeIn"
+            ><i class="fas fa-terminal" style="margin-right: 5px;"></i>Ver
+            comandos</a
+          >
         </div>
+        <div class="col-12 col-md-6" anmt="animate__fadeIn" id="cat">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/images/webp/xurumin_and_garfield.webp"
+            />
+            <img
+              src="./images/xurumin_and_garfield.png"
+              width="100%"
+              height="100%"
+              class=""
+              alt="`Xurumin e outro gato brincando"
+            />
+          </picture>
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid" id="footer">
-        <div class="row flex-row-reverse">
-            <div class="col-12 col-md-4">
-                <div id="right">
-                    <h1>Links úteis</h1>
-                    <ul>
-                        <li><a target="_blank" href="https://discord.com/invite/bvb8YKSCQR">Precisa de ajuda?</a></li>
-                        <li><a href="/comandos">Lista de comandos</a></li>
-                        <li><a target="_blank" href="https://github.com/xurumin/">Github do Xurumin</a></li>
-                        <li><a target="_blank" href="https://top.gg/bot/753723888671785042/vote">Quer ajudar o Xurumin?
-                                Vote agora!</a></li>
-                        <li><a href="/termos">Termos de Uso</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-8" id="copy">
-                Copyright © 2021 - Xurumin | By <a href="https://jnaraujo.github.io/" target="_blank">jnaraujo</a><br>
-                <span style="font-size: 10px;">Illustration by Erik Machado and Freepik Storyset</span>
-                <br>
-                <a style="font-size: 25px; margin-right: 15px;" target="_blank"
-                    href="https://www.instagram.com/xuruminbot/"><i class="fab fa-instagram"></i></a>
-                <a style="font-size: 25px;" target="_blank" href="https://twitter.com/xuruminbot"><i
-                        class="fab fa-twitter"></i></a>
-            </div>
+      <div class="row flex-row-reverse">
+        <div class="col-12 col-md-4">
+          <div id="right">
+            <h1>Links úteis</h1>
+            <ul>
+              <li>
+                <a target="_blank" href="https://discord.com/invite/bvb8YKSCQR"
+                  >Precisa de ajuda?</a
+                >
+              </li>
+              <li><a href="/comandos">Lista de comandos</a></li>
+              <li>
+                <a target="_blank" href="https://github.com/xurumin/"
+                  >Github do Xurumin</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://top.gg/bot/753723888671785042/vote"
+                  >Quer ajudar o Xurumin? Vote agora!</a
+                >
+              </li>
+              <li><a href="/termos">Termos de Uso</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="col-12 col-md-8" id="copy">
+          Copyright © 2021 - Xurumin | By
+          <a href="https://jnaraujo.com/" target="_blank">jnaraujo</a><br />
+          <span style="font-size: 10px;"
+            >Illustration by Erik Machado and Freepik Storyset</span
+          >
+          <br />
+          <a
+            style="font-size: 25px; margin-right: 15px;"
+            target="_blank"
+            href="https://www.instagram.com/xuruminbot/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            style="font-size: 25px;"
+            target="_blank"
+            href="https://twitter.com/xuruminbot"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
     </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
     <script src="/is-private-mode.js"></script>
     <script src="/script.js"></script>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1042fc66550c401db9fc01f315efa16f"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "1042fc66550c401db9fc01f315efa16f"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>
